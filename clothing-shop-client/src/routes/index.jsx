@@ -1,4 +1,5 @@
 import { HeaderOnly } from '../components/Layout'
+import { DefaultLayout } from '../components/Layout'
 
 import Home from '../pages/Home'
 import Nam from '../pages/Nam'
