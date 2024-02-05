@@ -1,3 +1,6 @@
+.header {
+    min-width: 1300px;
+}
 
 .header-help-wrapper {
     width: 100%;
@@ -44,6 +47,7 @@
 // header menu
 
 .header-menu-wrapper {
+    position: relative;
     border-bottom: 1px solid rgb(204, 204, 204);
     height: 72px;
     display: flex;
@@ -72,7 +76,10 @@
     display: flex;
     list-style: none;
     align-items: center;
-    
+    height: 80px;
+    &:hover .header-popper {
+        display: flex;
+    }
 }
 
 .header-segmentation-link {
@@ -115,4 +122,64 @@
 
 .header-btns-item:first-child {
     padding-top: 9px;
+}
+
+// header popper
+
+.header-popper {
+    position: absolute;
+    z-index: 1;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    display: none;
+}
+
+.popper-wrapper {
+    display: flex;
+    padding-top: 22px;
+}
+
+.popper-left {
+    width: 73.3766%;
+    display: flex;
+}
+
+.popper-left-block {
+    width: 25%;
+    display: block;
+}
+
+.left-type {
+    padding-right: 30px;
+    margin-bottom: 20px;
+}
+
+.popper-text-content {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+    line-height: 1.2;
+    color: rgb(27, 27, 27);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.separator {
+    width: 18px;
+    padding-right: 20px;
+    border-right: 1px solid #dadada;
+    margin-right: 40px;
+}
+
+.popper-right-block {
+    margin-bottom: 40px;
+}
+
+.segmentation-title {
+    color: #1b1b1b;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 12px;
 }
