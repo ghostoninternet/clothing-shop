@@ -1,4 +1,5 @@
 import { HeaderOnly } from '../components/Layout'
+import { DefaultLayout } from '../components/Layout'
 
 import Home from '../pages/Home'
 import Nam from '../pages/Nam'
@@ -8,7 +9,7 @@ import Baby from '../pages/Baby'
 
 
 const publicRoutes = [
-    { path: '/', component: Home, layout: HeaderOnly},
+    { path: '/', component: Home, layout: DefaultLayout},
     { path: '/men', component: Nam},
     { path: '/women', component: Nu},
     { path: '/kid', component: Kid},
