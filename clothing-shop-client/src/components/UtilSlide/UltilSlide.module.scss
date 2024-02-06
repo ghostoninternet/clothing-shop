@@ -1,0 +1,17 @@
+.util-title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.title-mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.util-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+}
