@@ -2,16 +2,15 @@ import { HeaderOnly } from '../components/Layout'
 import { DefaultLayout } from '../components/Layout'
 
 import Home from '../pages/Home'
-import Nam from '../pages/Nam'
-import Nu from '../pages/Nu'
+import Man from '../pages/Man'
+import Woman from '../pages/Woman'
 import Kid from '../pages/Kid'
 import Baby from '../pages/Baby'
 
-
 const publicRoutes = [
     { path: '/', component: Home, layout: DefaultLayout},
-    { path: '/men', component: Nam},
-    { path: '/women', component: Nu},
+    { path: '/men', component: Man },
+    { path: '/women', component: Woman},
     { path: '/kid', component: Kid},
     { path: '/baby', component: Baby},
 ]
