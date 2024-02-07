@@ -1,0 +1,81 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .banner-event {
+      margin-bottom: 17px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 17px;
+    }
+    
+    .product-category {
+      width: 100%;
+      margin-bottom: 17px;
+
+      .category-items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .category-item {
+          width: 24.5%;
+        }
+      }
+    }
+
+    .page-news {
+      width: 100%;
+      margin-bottom: 30px;
+
+      .page-news-title {
+        margin-bottom: 17px;
+      }
+
+      .news-items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .news-item {
+          width: 24.5%;
+        }
+      }
+    }
+
+    .limited-product {
+      width: 100%;
+      margin-bottom: 30px;
+
+      .product-container {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+
+        .special-product-container {
+          width: 33.3%;
+        }
+
+        .product-items-container {
+          width: 66.7%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 1.5rem;
+          
+          .product-item {
+            width: 32%;
+          }
+        }
+      }
+    }
+}

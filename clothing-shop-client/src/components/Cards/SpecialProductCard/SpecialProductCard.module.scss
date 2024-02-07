@@ -1,0 +1,35 @@
+.special-product-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .special-product-card-image {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .special-product-card-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .special-product-price {
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .special-product-card-price-red {
+    font-weight: bold;
+    font-size: large;
+    color: red;
+  }
+
+  .special-product-card-note {
+    color: red;
+  }
+
+}
+
