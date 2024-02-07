@@ -1,0 +1,31 @@
+.fr-contents-card {
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 28px;
+}
+
+.fr-wrapper {
+    border: 1px solid rgb(224, 224, 224);
+    padding: 28px 20px;
+}
+
+.fr-contents-card-title {
+    font-size: 22px;
+    line-height: 1.182;
+    padding: 16px 4vw 0;
+    margin: 0 0 8px;
+}
+
+.fr-contents-card-link {
+    text-decoration: underline;
+}
+
+.fr-contents-card-content {
+    margin: 20px 4vw;
+    line-height: 1.2;
+    font-weight: 700;
+    &:hover {
+        color: rgba(19, 31, 33, 0.7);
+    }
+}
+
