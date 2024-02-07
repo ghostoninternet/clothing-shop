@@ -26,7 +26,7 @@ function Footer() {
                             <p>Tài khoản</p>
                             <a href="https://www.uniqlo.com/vn/vi/member/">Tư cách thành viên</a>
                             <a href="https://www.uniqlo.com/vn/vi/member/details">Hồ sơ</a>
-                            <a href="https://www.uniqlo.com/vn/vi/member/coupon/wallet-store">Hồ sơ</a>
+                            <a href="https://www.uniqlo.com/vn/vi/member/coupon/wallet-store">Coupons</a>
                         </div>
 
                         <div className={`${styles["footer-utility-item"]}`}>
@@ -39,16 +39,16 @@ function Footer() {
                             <p>Tài khoản xã hội UNIQLO</p>
                             <div className={`${styles["social-icon"]}`}>
                                 <div className="social-icon-item">
-                                    <FacebookIcon />
+                                    <a href="https://www.facebook.com/uniqlovnam"><FacebookIcon /></a>
                                 </div>
                                 <div className="social-icon-item">
-                                    <InstagramIcon />
+                                    <a href="https://www.instagram.com/uniqlovnam/"><InstagramIcon /></a>
                                 </div>
                                 <div className="social-icon-item">
-                                    <TiktokIcon />
+                                    <a href="https://www.tiktok.com/@uniqlovn"><TiktokIcon /></a>
                                 </div>
                                 <div className="social-icon-item">
-                                    <YoutubeIcon />
+                                    <a href="https://www.youtube.com/channel/UCTCaSotwb_3myUjZNriRYrg"><YoutubeIcon /></a>
                                 </div>
                             </div>
                         </div>
