@@ -5,13 +5,15 @@ import Man from '../pages/Man'
 import Woman from '../pages/Woman'
 import Kid from '../pages/Kid'
 import Baby from '../pages/Baby'
+import Login from '../pages/Login'
 
 const publicRoutes = [
-    { path: '/', component: Home, layout: DefaultLayout},
+    { path: '/', component: Home },
     { path: '/men', component: Man },
-    { path: '/women', component: Woman},
-    { path: '/kid', component: Kid},
-    { path: '/baby', component: Baby},
+    { path: '/women', component: Woman },
+    { path: '/kid', component: Kid },
+    { path: '/baby', component: Baby },
+    { path: '/login', component: Login, layout: null },
 ]
 
 const privateRoutes = [
