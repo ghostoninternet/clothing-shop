@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    width: 50%;
+    min-height: 45px;
+}
+
+.button-text {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}

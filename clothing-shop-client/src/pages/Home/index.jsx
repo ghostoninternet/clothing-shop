@@ -1,4 +1,4 @@
-import { Fragment, useState, useRef } from "react";
+import { Fragment, useState, useRef, useEffect } from "react";
 
 import newYearImg from '../../assets/img/homePageImg/newYear.jpg'
 import newYearVoucher from '../../assets/img/homePageImg/newYearVoucher.jpg'
@@ -18,6 +18,9 @@ import styles from './Home.module.scss'
 const cx = classNames.bind(styles)
 
 function Home() {
+    useEffect(() => {
+        document.title = 'UNIQLO VN';
+    }, []);
     let id = 0;
     const ref = [useRef(), useRef(), useRef()]
     const slideImg = [
