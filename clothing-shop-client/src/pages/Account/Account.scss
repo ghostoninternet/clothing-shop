@@ -1,0 +1,55 @@
+.auth-account-title {
+    font-size: 35px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.auth-account-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.auth-account-heading {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.auth-account-input {
+    border: none;
+    padding: 12px;
+    background-color: rgb(247, 247, 247);
+    border-bottom: 0.8px solid rgb(171, 171, 171);
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0) 0px 1px 0px;
+
+    &:focus {
+        border-bottom-color: rgb(55, 134, 148);
+        border-bottom-width: 2px;
+        outline: 0.8px auto rgba(55, 134, 148, 0.25);
+        outline-offset: 4px;
+        padding-bottom: calc(12px - 0.8px);
+    }
+}
+
+.auth-account-note-text {
+    color: rgb(125, 125, 125);
+    font-size: 14px;
+    margin: 8px 0 20px 0;
+}
+
+.show-password {
+    display: flex;
+}
+
+.show-password-input {
+    width: 20px;
+    height: 20px;
+}
+
+.show-password-text {
+    padding-left: 8px;
+    font-size: 16px;
+}

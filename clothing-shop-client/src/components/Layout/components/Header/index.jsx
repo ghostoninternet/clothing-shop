@@ -15,7 +15,6 @@ function Header() {
     const headerIcon = [
         {
             icon: SearchIcon,
-            link: '/'
         },
         {
             icon: UserIcon,
@@ -370,7 +369,7 @@ function Header() {
                                     <ul className={cx('header-btns-list')}>
                                         {headerIcon.map((X, index) => (
                                             <li className={cx('header-btns-item')} key={index}>
-                                                <IconButton to={X.link}>
+                                                <IconButton href={X.link}>
                                                     <X.icon/>
                                                 </IconButton>
                                             </li>

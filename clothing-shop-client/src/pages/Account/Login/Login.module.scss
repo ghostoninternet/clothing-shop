@@ -1,0 +1,65 @@
+.logo-content {
+    margin-top: 40px;
+    border-bottom: 0.8px solid rgb(218, 218, 218);
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    height: 72px;
+}
+
+.logo-link {
+    display: flex;
+}
+
+.content-frame {
+    margin-top: 88px;
+}
+
+.content-wrapper {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+    border: 0.8px solid rgb(218, 218, 218);
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-title {
+    margin-bottom: 20px;
+}
+
+.policy-heading {
+    display: block;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.policy {
+    margin-bottom: 40px;
+}
+
+.forgot-password {
+    margin-top: 8px;
+}
+
+.separator {
+    border-left: 1px solid #dadada;
+    margin: 0 20px;
+}
+
+.login-frame, .signup-frame {
+    width: 50%;
+}
+
+.fotter {
+    margin-top: 88px;
+}
+
+.fotter-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+}

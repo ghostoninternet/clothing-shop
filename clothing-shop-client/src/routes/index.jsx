@@ -5,7 +5,9 @@ import Man from '../pages/Man'
 import Woman from '../pages/Woman'
 import Kid from '../pages/Kid'
 import Baby from '../pages/Baby'
-import Login from '../pages/Login'
+import Login from '../pages/Account/Login'
+import ResetPassword from '../pages/Account/ResetPassword'
+import Signup from '../pages/Account/Signup'
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -14,6 +16,8 @@ const publicRoutes = [
     { path: '/kid', component: Kid },
     { path: '/baby', component: Baby },
     { path: '/login', component: Login, layout: null },
+    { path: '/signup', component: Signup },
+    { path: '/password/reset', component: ResetPassword },
 ]
 
 const privateRoutes = [
