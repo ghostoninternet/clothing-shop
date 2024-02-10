@@ -1,0 +1,21 @@
+.path-list {
+    display: flex;
+    list-style: none;
+    margin: 15px 0 52px 0;
+}
+
+.link-item::after {
+    content: "/";
+    margin: 0 12px;
+    color: rgb(117, 117, 117);
+    font-size: 12px;
+}
+
+.link-item>.path-text {
+    text-decoration: underline;
+}
+
+.path-text {
+    color: rgb(117, 117, 117);
+    font-size: 12px;
+}
