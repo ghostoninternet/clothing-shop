@@ -1,0 +1,33 @@
+.auth-account-heading {
+    width: 38%;
+    padding-right: 17px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+
+.password-input-frame {
+    display: flex;
+}
+
+.password-input-text-frame {
+    width: 100%;
+}
+
+.empty-block {
+    width: calc(38% - 26px);
+}
+
+.radio-input {
+    width: 20px;
+    height: 20px;
+}
+
+.radio-input~label {
+    padding-left: 8px;
+    padding-right: 24px;
+}
+
+
+
