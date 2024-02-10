@@ -5,11 +5,16 @@ import ProductCard from "../../components/Cards/ProductCard";
 import SpecialProductCard from "../../components/Cards/SpecialProductCard";
 import styles from "./Man.module.scss";
 
+import { useEffect } from "react";
+
 function Man() {
+  useEffect(() => {
+    document.title = 'QUẦN ÁO & PHỤ KIỆN DÀNH CHO NAM';
+  }, []);
   return (
     <div className="container">
       <div className={`${styles["page-container"]}`}>
-        <div className={`${styles["page-title"]} ${styles["title"]}`}>Nam</div>
+        <div style={{fontSize: '45px', marginTop: '20px', lineHeight: '1'}} className={`${styles["page-title"]} ${styles["title"]}`}>Nam</div>
 
         <div className="banner">
           <div className={`${styles["banner-event"]}`}>
