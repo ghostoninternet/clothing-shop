@@ -113,7 +113,7 @@ function Signup() {
 
                             <p style={{color: '#7D7D7D', fontSize: '16px', marginBottom: '20px'}}>Bằng cách tạo tài khoản, bạn đồng ý với chính sách bảo mật và điều khoản sử dụng của UNIQLO.</p>
                             <div style={{marginBottom: '20px'}} className={cx('checkbox-input-frame')}>
-                                <input type="checkbox" className={cx('checkbox')}/>
+                                <input type="checkbox" className={cx('checkbox')} required/>
                                 <span className={cx('checkbox-input-text')}>Tôi đồng ý với ĐIỀU KHOẢN SỬ DỤNG và CHÍNH SÁCH BẢO MẬT CỦA UNIQLO</span>
                             </div>
 
