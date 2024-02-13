@@ -8,6 +8,7 @@ import Baby from '../pages/Baby'
 import Login from '../pages/Account/Login'
 import ResetPassword from '../pages/Account/ResetPassword'
 import Signup from '../pages/Account/Signup'
+import Wishlist from '../pages/Account/Wishlist'
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -18,6 +19,7 @@ const publicRoutes = [
     { path: '/login', component: Login, layout: null },
     { path: '/signup', component: Signup },
     { path: '/password/reset', component: ResetPassword },
+    { path: '/wishlist', component: Wishlist },
 ]
 
 const privateRoutes = [
