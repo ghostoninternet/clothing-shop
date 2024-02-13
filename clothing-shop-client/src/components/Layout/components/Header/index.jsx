@@ -22,7 +22,7 @@ function Header() {
         },
         {
             icon: HeartIcon,
-            link: '/'
+            link: '/wishlist'
         },
         {
             icon: CartIcon,
@@ -369,7 +369,7 @@ function Header() {
                                     <ul className={cx('header-btns-list')}>
                                         {headerIcon.map((X, index) => (
                                             <li className={cx('header-btns-item')} key={index}>
-                                                <IconButton href={X.link}>
+                                                <IconButton to={X.link}>
                                                     <X.icon/>
                                                 </IconButton>
                                             </li>
