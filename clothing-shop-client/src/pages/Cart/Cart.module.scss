@@ -60,4 +60,118 @@
     font-weight: 700;
     letter-spacing: 0.16px;
     line-height: 22.8px;
+    margin-bottom: 28px;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-text {
+    font-size: 16px;
+    color: rgb(27, 27, 27);
+    letter-spacing: 0.16px;
+    line-height: 19.2px;
+}
+
+.total-text-huge {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(27, 27, 27);
+    letter-spacing: 0.4px;
+    line-height: 24px;
+}
+
+.coupons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+.coupons-icon, .gift-icon, .pay-note-icon {
+    background-image: url('./coupon.svg');
+    background-size: 72px 24px;
+    height: 24px;
+    width: 24px;
+}
+
+.coupons-text {
+    font-size: 16px;
+    color: rgb(27, 27, 27);
+    letter-spacing: 0.32px;
+    line-height: 24px;
+    margin-left: 8px;
+}
+
+.next-arrow {
+    background-image: url('./next.svg');
+    width: 24px;
+    height: 24px;
+}
+
+.gift-wrapper {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.gift-icon {
+    background-image: url('./gift.svg');
+    background-size: 24px 24px;
+}
+
+.pay-text-wrapper {
+    width: calc(100% - 24px);
+    margin-right: 29.5px;
+    color: rgb(27, 27, 27);
+    font-size: 15px;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+}
+
+.pay-note-icon {
+    background-image: url('./info.svg');
+    background-size: 24px 24px;
+}
+
+.pay-button, .next-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    border: 0.8px solid rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.16px;
+    line-height: 25px;
+    min-height: 45px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.next-button {
+    background-color: white;
+    border-color: rgb(0, 0, 0);
+    color: rgb(27, 27, 27);
+}
+
+.pay-note {
+    margin-top: 12px;
+}
+
+.pay-note-text {
+    color: rgb(125, 125, 125);
+    font-size: 13px;
+    letter-spacing: 0.16px;
+    line-height: 15.6px;
 }
