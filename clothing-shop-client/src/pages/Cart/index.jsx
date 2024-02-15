@@ -3,6 +3,7 @@ import styles from './Cart.module.scss'
 import { Fragment, useEffect, useRef, useState } from 'react';
 import CartItem from '../../components/CartItem';
 import PathText from '../../components/PathText';
+import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles)
 
 function Cart() {
@@ -55,12 +56,13 @@ function Cart() {
     ]
 
     let prevCompCount
+    let prevTotal
 
     const [cartlist, setCartlist] = useState(cartlistFetch)
     const [productCount, setProductCount] = useState(cartlistFetch.length)
     const [total, setTotal] = useState(() => {
         let s = 0
-        cartlistFetch.map((x, i) => {
+        cartlistFetch.map((x) => {
             if (x.offerPrice)
                 s += parseInt((x.offerPrice.replace('.','')).replace(' VND', ''))
             else
@@ -72,6 +74,7 @@ function Cart() {
     const popperRef = useRef([])
     const updownRef = useRef([])
     const countRef = useRef([])
+    const totalRef = useRef([])
     const handleUpdown = (index) => {
         if (updownRef.current[index].classList.contains(cx('chevron_updown-rotateDown'))) {
             updownRef.current[index].classList.remove(cx('chevron_updown-rotateDown'))
@@ -93,16 +96,26 @@ function Cart() {
         updownRef.current[index].classList.add(cx('chevron_updown-rotateDown'))
         popperRef.current[index].style.display = 'none'
         prevCompCount = countRef.current[index].textContent
+        prevTotal = parseInt((totalRef.current[index].textContent.replace(' VND', '')).replace(/\./g,''))
     }
     const handleRemove = (index) => {
+        let removeTotal = parseInt((totalRef.current[index].textContent.replace(' VND', '')).replace(/\./g,''))
+        setTotal(total - removeTotal)
+
+        let removeCompCount = countRef.current[index].textContent
+        setProductCount(productCount - removeCompCount)
+
         const newCartlist = [...cartlist]
         newCartlist.splice(index, 1)
         setCartlist(newCartlist)
-        
     }
     const handleCalProductCount = (value) => {
         setProductCount(productCount + value - prevCompCount)
     }
+    const handleCalTotal = (value) => {
+        setTotal(total + value - prevTotal)
+    }
+
     return (
         <Fragment>
             <PathText path={path}/>
@@ -112,11 +125,12 @@ function Cart() {
                     <div className={cx('left-container')}>
                     {cartlist.map((X, index) => {
                         return (
-                            <CartItem item={X} updownRef={updownRef} popperRef={popperRef} countRef={countRef} refId={index} key={index} 
+                            <CartItem item={X} updownRef={updownRef} popperRef={popperRef} countRef={countRef} totalRef={totalRef} refId={index} key={index} 
                                 handleUpdown={() => handleUpdown(index)}
                                 handleChoseQuantity={() => handleChoseQuantity(index)}
                                 handleRemove={() => handleRemove(index)}
                                 handleCalProductCount={handleCalProductCount}
+                                handleCalTotal={handleCalTotal}
                             />
                         )
                     })}
@@ -124,6 +138,60 @@ function Cart() {
                     <div className={cx('right-container')}>
                         <div className={cx('total-wrapper')}>
                             <h2 className={cx('total-title')}>TỔNG ĐƠN HÀNG| {productCount} SẢN PHẨM</h2>
+                            <div className={cx('space-between')} style={{marginBottom: '28px'}}>
+                                <p className={cx('total-text')}>Tổng cộng</p>
+                                <p className={cx('total-text')}>{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " VND"}</p>
+                            </div>
+                            <div className={cx('space-between')} style={{marginBottom: '9.6px'}}>
+                                <p className={cx('total-text-huge')}>TỔNG</p>
+                                <p className={cx('total-text-huge')}>{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " VND"}</p>
+                            </div>
+                            <div className={cx('space-between')} style={{marginBottom: '28px'}}>
+                                <p className={cx('total-text')}>Thuế giá trị gia tăng</p>
+                                <p className={cx('total-text')}>{(total*8/100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " VND"}</p>
+                            </div>
+                            <div className={cx('space-between')} style={{alignItems: 'end'}}>
+                                <p className={cx('total-text-huge')} style={{width: '200px',paddingRight: '15px'}}>TỔNG ĐƠN ĐẶT HÀNG</p>
+                                <p className={cx('total-text-huge')} style={{fontSize: '16px'}}>{(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " VND"}</p>
+                            </div>
+                        </div>
+                        <div className={cx('coupons')}>
+                            <div style={{display: 'flex'}}>
+                                <div className={cx('coupons-icon')}></div>
+                                <div className={cx('coupons-text')}>Phiếu giảm giá</div>
+                            </div>
+                            <div className={cx('next-arrow')}></div>
+                        </div>
+                        <div className={cx('gift-wrapper')}>
+                            <div style={{display: 'flex'}}>
+                                <div className={cx('gift-icon')}></div>
+                                <div className={cx('coupons-text')}>Tùy chọn quà tặng</div>
+                            </div>
+                            <div className={cx('next-arrow')}></div>
+                        </div>
+                        <div className={cx('pay-wrapper')}>
+                            <div style={{display: 'flex', alignItems: 'center', marginBottom: '28px'}}>
+                                <div className={cx('pay-text-wrapper')}>
+                                    <span>Nhận hàng online xuyên Tết tại Cửa hàng UNIQLO cùng Click & Collect. Từ 19.01- 15.02.2024, với bất kỳ đơn hàng sử dụng dịch vụ Click & Collect (Đặt Online và Nhận hàng tại các cửa hàng) chọn nhận hàng tại tất cả cửa hàng UNIQLO trên toàn quốc, tặng mã giảm giá 100.000VND cho đơn hàng tiếp theo tại website/ứng dụng từ 1.000.000VND. Miễn phí giao hàng áp dụng cho đơn hàng giao tận nơi từ 999.000VND và tất cả các đơn nhận tại cửa hàng (Click & Collect).</span>
+                                </div>
+                                <div className={cx('pay-note-icon')}></div>
+                            </div>
+                            <div className={cx('pay-button-wrapper')}>
+                                <a className={cx('pay-button-link')} href="">
+                                    <div className={cx('pay-button')}>THANH TOÁN</div>
+                                </a>
+                                <div className={cx('pay-button-link')} style={{marginTop: '16px'}}>
+                                    <Link to={'/'}>
+                                        <div className={cx('next-button')}>TIẾP TỤC MUA SẮM</div>
+                                    </Link>
+                                </div>
+                                <div className={cx('pay-note')}>
+                                    {(total >= 999000) ?
+                                        <div className={cx('pay-note-text')}>Đủ điều kiện áp dụng miễn phí vận chuyển.</div> :
+                                        <div className={cx('pay-note-text')}>Đặt mua thêm {(999000-total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} (bao gồm VAT), hoặc chọn hình thức Click & Collect, để được miễn phí giao hàng.</div>
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -3,13 +3,15 @@ import styles from './CartItem.module.scss'
 import { Fragment, useRef, useState } from "react";
 const cx = classNames.bind(styles)
 
-function CartItem( {item, updownRef, popperRef, countRef, refId, handleUpdown, handleChoseQuantity, handleRemove, handleCalProductCount} ) {
-    const [count, setCount] = useState(1)
-
+function CartItem( {item, updownRef, popperRef, countRef, totalRef, refId, handleUpdown, handleChoseQuantity, handleRemove, handleCalProductCount, handleCalTotal} ) {
     const handleChose = (i) => {
-        setCount(i)
         handleChoseQuantity()
+        item.buyCount = i
         handleCalProductCount(i)
+        handleCalTotal(item.offerPrice ?
+            (i*parseInt((item.offerPrice.replace(/\./g,'')).replace(' VND', ''))) :
+            (i*parseInt((item.price.replace(/\./g,'')).replace(' VND', '')))
+        )
     }
  
     return (
@@ -34,7 +36,7 @@ function CartItem( {item, updownRef, popperRef, countRef, refId, handleUpdown, h
                         <div className={cx('product-nb-text')}>SỐ LƯỢNG</div>
                         <div className={cx('product-footer-wrapper')}>
                             <div className={cx('product-nb')}>
-                                <span className={cx('product-nb-value')} ref={(element) => countRef.current[refId] = element}>{count}</span>
+                                <span className={cx('product-nb-value')} ref={(element) => countRef.current[refId] = element}>{item.buyCount ? item.buyCount : 1}</span>
                                 <div className={cx('chevron_updown')} ref={(element) => updownRef.current[refId] = element} onClick={handleUpdown}></div>
                                 <div className={cx('product-nb-popper')} ref={(element) => popperRef.current[refId] = element}>
                                     {[...Array(parseInt(item.quantity))].map((x, i) => (
@@ -45,8 +47,8 @@ function CartItem( {item, updownRef, popperRef, countRef, refId, handleUpdown, h
                             <div className={cx('product-total-wrapper')}>
                                 <span className={cx('product-total-text')}>TỔNG: </span>
                                 {item.offerPrice ?
-                                    <span className={cx('product-total-value')} style={{color: 'rgb(255, 0, 0)'}}>{(count*parseInt((item.offerPrice.replace('.','')).replace(' VND', ''))).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " VND"}</span> :
-                                    <span className={cx('product-total-value')}>{(count*parseInt((item.price.replace('.','')).replace(' VND', ''))).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " VND"}</span>
+                                    <span ref={(element) => totalRef.current[refId] = element} className={cx('product-total-value')} style={{color: 'rgb(255, 0, 0)'}}>{((item.buyCount ? item.buyCount : 1)*parseInt((item.offerPrice.replace(/\./g,'')).replace(' VND', ''))).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " VND"}</span> :
+                                    <span ref={(element) => totalRef.current[refId] = element} className={cx('product-total-value')}>{((item.buyCount ? item.buyCount : 1)*parseInt((item.price.replace(/\./g,'')).replace(' VND', ''))).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " VND"}</span>
                                 }
                             </div>
                         </div>
