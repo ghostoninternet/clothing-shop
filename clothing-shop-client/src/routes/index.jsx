@@ -5,6 +5,8 @@ import CategoryPage from '../pages/CategoryPage'
 import Login from '../pages/Account/Login'
 import ResetPassword from '../pages/Account/ResetPassword'
 import Signup from '../pages/Account/Signup'
+import Wishlist from '../pages/Account/Wishlist'
+import Cart from '../pages/Cart'
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -15,6 +17,8 @@ const publicRoutes = [
     { path: '/login', component: Login, layout: null },
     { path: '/signup', component: Signup },
     { path: '/password/reset', component: ResetPassword },
+    { path: '/wishlist', component: Wishlist },
+    { path: '/cart', component: Cart },
 ]
 
 const privateRoutes = [

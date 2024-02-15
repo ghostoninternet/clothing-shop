@@ -5,6 +5,7 @@ import { Logo } from '../../../components/SvgIcon'
 import Account from '..';
 import Input from '../../../components/Input';
 import TextButton from '../../../components/TextButton';
+import { Link } from 'react-router-dom';
 
 
 const cx = classNames.bind(styles)
@@ -29,9 +30,9 @@ function Login() {
         <Account>
             <div className={cx('logo-content')}>
                 <div className={"container " + cx('logo-wrapper')}>
-                    <a href="/" className={cx('logo-link')}>
+                    <Link to="/" className={cx('logo-link')}>
                         <Logo></Logo>
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className={cx('content-frame')}>
