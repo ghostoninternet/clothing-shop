@@ -1,0 +1,63 @@
+.cart-title {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.34px;
+    line-height: 34px;
+    margin-bottom: 88px;
+}
+
+.main-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container {
+    width: 62.5%;
+}
+
+.chevron_updown-rotateUp {
+    animation-duration: 0.2s;
+    animation-name: upToDown;
+    animation-fill-mode: forwards
+}
+
+.chevron_updown-rotateDown {
+    animation-duration: 0.2s;
+    animation-name: downToUp;
+    animation-fill-mode: forwards
+}
+
+@keyframes upToDown {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes downToUp {
+    0% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.right-container {
+    width: 31.25%;
+}
+
+.total-wrapper {
+    padding: 28px 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.total-title {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.16px;
+    line-height: 22.8px;
+}

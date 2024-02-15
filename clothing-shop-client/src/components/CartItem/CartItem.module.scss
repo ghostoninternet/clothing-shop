@@ -1,0 +1,161 @@
+.product-wrapper {
+    display: flex;
+}
+
+.product-wrapper ~ .product-wrapper {
+    padding-top: 28px;
+    margin-bottom: 28px;
+    border-top: 0.8px solid rgb(218, 218, 218);
+}
+
+.product-wrapper:first-child {
+    margin-bottom: 28px;
+}
+
+.img-wrapper {
+    width: calc(100% - 554px);
+}
+
+.product-img {
+    width: 100%;
+}
+
+
+.info-wrapper {
+    position: relative;
+    padding-left: 20px;
+    width: 554px;
+}
+
+.product-info-name {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+}
+
+.product-info-id, .product-info-color, .product-info-size, .limited-time, .limited-price, .product-nb-value {
+    color: rgb(125, 125, 125);
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    line-height: 19.2px;
+    margin-bottom: 8px;
+}
+
+.product-info-color, .product-info-size {
+    color: rgb(27, 27, 27);
+}
+
+.limited-time {
+    color: rgb(255, 0, 0);
+    margin-bottom: 24px;
+}
+
+.limited-price {
+    color: rgb(255, 0, 0);
+}
+
+.price-wrapper {
+    margin-top: 16px;
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+    color: rgb(27, 27, 27);
+}
+
+.product-nb-text {
+    margin-top: 12px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: rgb(27, 27, 27);
+    font-weight: 700;
+    letter-spacing: 0.26px;
+    line-height: 15.6px;
+}
+
+.remove-product {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    background-image: url('./remove.svg');
+    cursor: pointer;
+}
+
+.product-nb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px 0 15px;
+    border: 0.8px solid rgb(171, 171, 171);
+    width: 134px;
+    height: 45px;
+}
+
+.product-nb-value {
+    margin-bottom: 0;
+    color: rgb(27, 27, 27);
+}
+
+.chevron_updown {
+    background-image: url('./chevron_updown.svg');
+    background-size: 72px 24px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.product-nb-popper {
+    position: absolute;
+    z-index: 1;
+    top: 44.4px;
+    left: -0.8px;
+    background-color: white;
+    
+    width: 134px;
+    border-left: 1px solid #757575;
+    border-right: 1px solid #757575;
+    border-bottom: 1px solid #757575;
+    display: none;
+}
+
+.product-nb-popper-value {
+    padding: 12px;
+    color: rgb(55, 134, 148);
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    line-height: 19.2px;
+    width: 134px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0,0,0,0.035);
+    }
+}
+
+.product-footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-total-text {
+    color: rgb(27, 27, 27);
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    line-height: 19.5556px;
+}
+
+.product-total-value {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 24.4445px;
+}

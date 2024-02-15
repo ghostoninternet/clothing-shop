@@ -26,7 +26,7 @@ function Header() {
         },
         {
             icon: CartIcon,
-            link: '/'
+            link: '/cart'
         },
     ]
     const headerSegmentation = [
