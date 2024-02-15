@@ -1,5 +1,5 @@
 export const ManProduct = {
-  manCategories: [
+  highlightCategories: [
     {
       "id": 1,
       "categoryName": "ĐỒ MẶC NGOÀI",
@@ -73,37 +73,37 @@ export const ManProduct = {
       "categoryUrl": "/category/12"
     },
   ],
-  manNews: [
+  news: [
     {
       "id": 1,
-      "newsTitle": "TẾT ẤM ÁP CÙNG UNIQLO",
-      "newsImage": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
-      "newsUrl": "/news/1",
-      "newsDescription": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
+      "title": "TẾT ẤM ÁP CÙNG UNIQLO",
+      "image": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
+      "url": "/news/1",
+      "description": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
     },
     {
       "id": 2,
-      "newsTitle": "TẾT ẤM ÁP CÙNG UNIQLO",
-      "newsImage": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
-      "newsUrl": "/news/1",
-      "newsDescription": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
+      "title": "TẾT ẤM ÁP CÙNG UNIQLO",
+      "image": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
+      "url": "/news/1",
+      "description": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
     },
     {
       "id": 3,
-      "newsTitle": "TẾT ẤM ÁP CÙNG UNIQLO",
-      "newsImage": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
-      "newsUrl": "/news/1",
-      "newsDescription": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
+      "title": "TẾT ẤM ÁP CÙNG UNIQLO",
+      "image": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
+      "url": "/news/1",
+      "description": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
     },
     {
       "id": 4,
-      "newsTitle": "TẾT ẤM ÁP CÙNG UNIQLO",
-      "newsImage": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
-      "newsUrl": "/news/1",
-      "newsDescription": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
+      "title": "TẾT ẤM ÁP CÙNG UNIQLO",
+      "image": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
+      "url": "/news/1",
+      "description": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
     },
   ],
-  manSpecialProduct: [
+  specialProduct: [
     {
       "id": 1,
       "specialUrl": "/product/1",
@@ -141,7 +141,7 @@ export const ManProduct = {
       "specialNote": "Số lượng có hạn"
     },
   ],
-  manLimitedProduct: [
+  limitedProduct: [
     {
       "id": 1,
       "productUrl": "/product/1",
@@ -314,6 +314,39 @@ export const ManProduct = {
       "productNumOfReviews": 50
     }
   ],
+  utCollection: {
+    utCollectionUrl: "https://www.uniqlo.com/vn/vi/spl/ut-collection",
+    utCollectionItems: [
+      {
+        "id": 1,
+        "title": "PEANUTS YOU CAN BE ANYTHING!",
+        "image": "https://im.uniqlo.com/global-cms/spa/res8b31ae68a1be140cf69b61611dc01f7efr.jpg",
+        "url": "/collection/1",
+        "description": "Những họa tiết mới khắc họa sống động các nhân vật Peanuts hiện đã có mặt tại UNIQLO UT."
+      },
+      {
+        "id": 2,
+        "title": "DISNEY VINTAGE POSTER COLLECTION",
+        "image": "https://im.uniqlo.com/global-cms/spa/res6129df9efdb57d7b3af31a5e9de02b89fr.jpg",
+        "url": "/collection/2",
+        "description": "Bộ sưu tập lấy cảm hứng từ poster các bộ phim ngắn về chú chuột Mickey Mouse."
+      },
+      {
+        "id": 3,
+        "title": "PEANUTS YOU CAN BE ANYTHING!",
+        "image": "https://im.uniqlo.com/global-cms/spa/res8b31ae68a1be140cf69b61611dc01f7efr.jpg",
+        "url": "/collection/3",
+        "description": "Những họa tiết mới khắc họa sống động các nhân vật Peanuts hiện đã có mặt tại UNIQLO UT."
+      },
+      {
+        "id": 4,
+        "title": "DISNEY VINTAGE POSTER COLLECTION",
+        "image": "https://im.uniqlo.com/global-cms/spa/res6129df9efdb57d7b3af31a5e9de02b89fr.jpg",
+        "url": "/collection/4",
+        "description": "Bộ sưu tập lấy cảm hứng từ poster các bộ phim ngắn về chú chuột Mickey Mouse."
+      },
+    ]
+  }
 }
 
 export const WomanProduct = {

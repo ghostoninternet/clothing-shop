@@ -1,0 +1,18 @@
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .button {
+    width: 50%;
+    border: 1px solid #000;
+    padding: 15px;
+
+    .button-text {
+      text-align: center;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+}
