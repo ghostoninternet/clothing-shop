@@ -17,7 +17,7 @@ function CategoryPageProduct({title, specialProduct, products}) {
             specialTitle={specialProduct.specialTitle}
             specialDescription={specialProduct.specialDescription}
             specialPrice={specialProduct.specialPrice}
-            specialNote={specialProduct.specialNote}
+            specialNote={specialProduct?.specialNote}
           />
         </div>
         <div className={`${styles["product-items-container"]}`}>
@@ -33,9 +33,11 @@ function CategoryPageProduct({title, specialProduct, products}) {
                       productGender={product.productGender}
                       productSize={product.productSize}
                       productTitle={product.productTitle}
+                      productDescription={product?.productDescription}
                       productPrice={product.productPrice}
-                      productNewPrice={product.productNewPrice}
-                      productNote={product.productNote}
+                      productNewPrice={product?.productNewPrice}
+                      productStatus={product?.productStatus}
+                      productNote={product?.productNote}
                       productStar={parseInt(product.productStar)}
                       productNumOfReviews={product.productNumOfReviews}
                     />
