@@ -10,7 +10,7 @@ function ProductCard({productUrl, productImage, productColors, productGender, pr
             <div className={`${styles["product-image"]}`}>
               <img src={productImage} alt={`${productTitle} Image`} />
               <div className={`${styles["product-favorite"]}`}>
-                <button className={`${styles["product-favorite-btn"]}`}>
+                <button type="button" className={`${styles["product-favorite-btn"]}`}>
                   <span role="img" className={`${styles["product-favorite-btn-icon"]}`}></span>
                 </button>
               </div>
