@@ -1,0 +1,85 @@
+.no-select {
+    -webkit-touch-callout: none; /* Safari */
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -khtml-user-select: none; /* Konqueror 4.0+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* Internet Explorer 10+ */
+    user-select: none; /* Standard syntax */
+}  
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-left {
+    width: 673px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-list {
+    width: 134px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.main-img {
+    width: 519px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-list {
+    padding: 5px 0 0 5px;
+}
+
+.img-item-wrapper {
+    box-sizing: content-box;
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-color: transparent;
+    display: block;
+}
+
+.img-item {
+    width: 45px;
+    height: 45px;
+}
+
+.next-button, .prev-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    background-color: rgba(246, 246, 246, 0.75);
+    cursor: pointer;
+    
+    &:hover {
+        background-color: #a7a8a8;
+        svg {
+            path {
+                color: #f3f3f3;
+            }
+        }
+    }
+    svg {
+        path {
+            color: #757575;
+        }
+    }
+}
+
+.next-button {
+    right: 0;
+}

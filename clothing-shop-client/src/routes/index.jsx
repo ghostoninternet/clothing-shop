@@ -7,6 +7,7 @@ import ResetPassword from '../pages/Account/ResetPassword'
 import Signup from '../pages/Account/Signup'
 import Wishlist from '../pages/Account/Wishlist'
 import Cart from '../pages/Cart'
+import ProductDetail from '../pages/ProductDetail'
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -19,6 +20,7 @@ const publicRoutes = [
     { path: '/password/reset', component: ResetPassword },
     { path: '/wishlist', component: Wishlist },
     { path: '/cart', component: Cart },
+    { path: '/product/:productIdPath', component: ProductDetail },
 ]
 
 const privateRoutes = [
