@@ -11,7 +11,7 @@ function PathText({ children, path }) {
                 {path.map((X, index) => {
                     if (!X.link)
                         return (
-                            <li className={cx('path-item')} key={index}>
+                            <li className={cx('path-item', 'text-item')} key={index}>
                                 <span className={cx('path-text')}>{X.text}</span>
                             </li>
                         )

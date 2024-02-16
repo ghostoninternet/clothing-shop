@@ -4,15 +4,20 @@
     margin: 15px 0 52px 0;
 }
 
-.link-item::after {
+.link-item > .path-text {
+    text-decoration: underline;
+}
+
+.path-item::after {
     content: "/";
     margin: 0 12px;
     color: rgb(117, 117, 117);
     font-size: 12px;
+    text-decoration: none;
 }
 
-.link-item>.path-text {
-    text-decoration: underline;
+.path-item:last-child::after {
+    display: none;
 }
 
 .path-text {
