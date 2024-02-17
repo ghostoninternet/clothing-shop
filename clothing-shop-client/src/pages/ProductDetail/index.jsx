@@ -117,14 +117,17 @@ function ProductDetail() {
 
     const [displayImage, setDisplayImage] = useState(product.mainImage[0])
 
-    useEffect(() => {
-        imgItemRef.current[0].style.borderColor = 'black';
-    },[])
+    
 
     
     const imgItemRef = useRef([])
     const prevBorderRef = useRef(0)
     const currentBorderRef = useRef(0)
+
+    useEffect(() => {
+        if (imgItemRef.current[0])
+            imgItemRef.current[0].style.borderColor = 'black';
+    },[])
 
     const handleImgClick = (index) => {
         setDisplayImage(imageList[index])
