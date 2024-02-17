@@ -14,8 +14,6 @@
 
 .card-left {
     width: 673px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .img-list {
@@ -82,4 +80,95 @@
 
 .next-button {
     right: 0;
+}
+
+.img-index-wrapper {
+    margin-top: 10px;
+    color: rgb(125, 125, 125);
+    font-size: 13px;
+    letter-spacing: 0.16px;
+    line-height: 15.6px;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.describe {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    line-height: 20px;
+}
+
+.describe-code-text {
+    color: rgb(125, 125, 125);
+    letter-spacing: 0.14px;
+    line-height: 16.156px;
+    font-size: 14px;
+}
+
+.separator {
+    border-top: 1px solid rgb(218, 218, 218);
+}
+
+.describe-title {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 24px;
+}
+
+.describe-item-wrapper {
+    height: 62px;
+    display: flex;
+    align-items: center;
+}
+
+.open-arrow {
+    background-image: url('./openArrow.svg');
+    height: 24px;
+    width: 24px;
+    background-size: 24px 24px;
+    cursor: pointer;
+}
+
+.chevron_updown-rotateUp {
+    animation-duration: 0.2s;
+    animation-name: upToDown;
+    animation-fill-mode: forwards
+}
+
+.chevron_updown-rotateDown {
+    animation-duration: 0.2s;
+    animation-name: downToUp;
+    animation-fill-mode: forwards
+}
+
+@keyframes upToDown {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes downToUp {
+    0% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.describe-popper {
+    display: none;
+    padding: 20px;
+    line-height: 24px;
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    color: rgb(27, 27, 27);
 }
