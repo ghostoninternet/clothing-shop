@@ -66,21 +66,23 @@ function ProductDetail() {
         note: 'Sản phẩm được làm từ chất liệu tái chế',
         description: 'Chống nắng trên mọi chuyến đi. Vải có kết cấu sắc nét, có lớp bề mặt chống bám nước. Với chỉ số chống nắng UPF50+.',
         quantity: '5',
-        overview: `- Chất liệu vải có kết cấu sắc nét, phù hợp cho các hoạt động ngoài trời hoặc phong cách giản dị.
-            - Với công nghệ UV Protection (Chống tia UV).
-            - Lớp bề mặt chống bám nước. * Vải được phủ một chất chống bám nước nên hiệu quả kéo dài hơn. Sự kết thúc không phải là vĩnh viễn.
-            - Thiết kế có thể bỏ túi.
-            - Kiểu dáng hình hộp vừa vặn thoải mái ở cơ thể, vai và tay áo.
-            - Túi đựng gắn vào một vòng ở bên trong bên trái.
-            - Mẫu kẻ carô nhỏ.
-            - Hoàn hảo để mặc thường ngày và các hoạt động nhẹ nhàng ngoài trời như cắm trại. *Sản phẩm không có khả năng kháng hoặc chống cháy. Hãy thận trọng nếu có ngọn lửa gần đó.`,
-        material: `Mã sản phẩm 464023
-            Xin lưu ý mã số nhận diện của sản phẩm có thể có sự khác biệt, kể cả khi đó là cùng một mặt hàng.
-            VẢI
-            Thân: 86% Nylon, 14% Polyeste ( 40% Sử Dụng Sợi Nylon Tái Chế ), ( 14% Sử Dụng Sợi Polyeste Tái Chế )/ Vải Túi: 100% Polyeste
-            HƯỚNG DẪN GIẶT
-            Giặt máy nước lạnh, giặt nhẹ, Không giặt khô, Không sấy khô
-            - Những hình ảnh sản phẩm có thể bao gồm những màu không có sẵn.`,
+        overview: [
+            '- Chất liệu vải có kết cấu sắc nét, phù hợp cho các hoạt động ngoài trời hoặc phong cách giản dị.',
+            '- Với công nghệ UV Protection (Chống tia UV).',
+            '- Lớp bề mặt chống bám nước. * Vải được phủ một chất chống bám nước nên hiệu quả kéo dài hơn. Sự kết thúc không phải là vĩnh viễn.',
+            '- Thiết kế có thể bỏ túi.',
+            '- Kiểu dáng hình hộp vừa vặn thoải mái ở cơ thể, vai và tay áo.',
+            '- Túi đựng gắn vào một vòng ở bên trong bên trái.',
+            '- Mẫu kẻ carô nhỏ.',
+            '- Hoàn hảo để mặc thường ngày và các hoạt động nhẹ nhàng ngoài trời như cắm trại. *Sản phẩm không có khả năng kháng hoặc chống cháy. Hãy thận trọng nếu có ngọn lửa gần đó.',
+        ],
+        material: [
+            'VẢI',
+            'Thân: 86% Nylon, 14% Polyeste ( 40% Sử Dụng Sợi Nylon Tái Chế ), ( 14% Sử Dụng Sợi Polyeste Tái Chế )/ Vải Túi: 100% Polyeste',
+            'HƯỚNG DẪN GIẶT',
+            'Giặt máy nước lạnh, giặt nhẹ, Không giặt khô, Không sấy khô',
+            '- Những hình ảnh sản phẩm có thể bao gồm những màu không có sẵn.',
+        ],
         path: [
             {
                 text: 'UNIQLO',
@@ -123,6 +125,8 @@ function ProductDetail() {
     const imgItemRef = useRef([])
     const prevBorderRef = useRef(0)
     const currentBorderRef = useRef(0)
+    const openArrowRef = useRef([])
+    const describePopper = useRef([])
 
     useEffect(() => {
         if (imgItemRef.current[0])
@@ -151,6 +155,24 @@ function ProductDetail() {
             handleImgClick(currentBorderRef.current - 1)
     }
 
+    const hadleOpenArrow = (index) => {
+        if (openArrowRef.current[index].classList.contains(cx('chevron_updown-rotateDown'))) {
+            openArrowRef.current[index].classList.remove(cx('chevron_updown-rotateDown'))
+            openArrowRef.current[index].classList.add(cx('chevron_updown-rotateUp'))
+            describePopper.current[index].style.display = 'block'
+            return
+        }
+        if (openArrowRef.current[index].classList.contains(cx('chevron_updown-rotateUp'))) {
+            openArrowRef.current[index].classList.remove(cx('chevron_updown-rotateUp'))
+            openArrowRef.current[index].classList.add(cx('chevron_updown-rotateDown'))
+            describePopper.current[index].style.display = 'none'
+            return
+        }
+        describePopper.current[index].style.display = 'block'
+        openArrowRef.current[index].classList.add(cx('chevron_updown-rotateUp'))
+
+    }
+
     return (
         <Fragment>
             {!(/^E\d{6}-000/).test(productIdPath) ?
@@ -158,28 +180,94 @@ function ProductDetail() {
                 <div>
                     <PathText path={product.path}/>
                     <div className={'container ' + cx('card-wrapper')}>
-                        <div className={cx('card-left')}>
-                            <div className={cx('img-list', 'no-select')}>
-                                {imageList.map((img, index) => {
-                                    return (
-                                        <div className={cx('img-item-wrapper')} key={index} ref={el => imgItemRef.current[index] = el} onClick={() => handleImgClick(index)}>
-                                            <img src={img} alt="" className={cx('img-item')}/>
+                        <div>
+                            <div className={cx('card-left')}>
+                                <div>
+                                    <div className={cx('space-between')}>
+                                        <div className={cx('img-list', 'no-select')}>
+                                            {imageList.map((img, index) => {
+                                                return (
+                                                    <div className={cx('img-item-wrapper')} key={index} ref={el => imgItemRef.current[index] = el} onClick={() => handleImgClick(index)}>
+                                                        <img src={img} alt="" className={cx('img-item')}/>
+                                                    </div>
+                                                )
+                                            })}
                                         </div>
-                                    )
-                                })}
-                            </div>
-                            <div className={cx('main-img', 'no-select')}>
-                                <img src={displayImage} alt="" style={{width: '519px'}}/>
-                                <div className={cx('next-button')} onClick={() => handleNextSlide()}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"><path fill="currentColor" fillRule="evenodd" d="M16.26 12l-6.03 7-1.49-1.34L13.62 12 8.74 6.34 10.23 5l6.03 7z"></path></svg>
+                                        <div>
+                                            <div className={cx('main-img', 'no-select')}>
+                                                <img src={displayImage} alt="" style={{width: '519px'}}/>
+                                                <div className={cx('next-button')} onClick={() => handleNextSlide()}>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"><path fill="currentColor" fillRule="evenodd" d="M16.26 12l-6.03 7-1.49-1.34L13.62 12 8.74 6.34 10.23 5l6.03 7z"></path></svg>
+                                                </div>
+                                                <div className={cx('prev-button')} onClick={() => handlePrevSlide()}>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"><path fill="currentColor" fillRule="evenodd" d="M7.74 12l6.03 7 1.49-1.34L10.38 12l4.88-5.66L13.77 5l-6.03 7z"></path></svg>
+                                                </div>
+                                            </div>
+                                            <div className={cx('img-index-wrapper')}>
+                                                {currentBorderRef.current+1}/{imageList.length}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className={cx('prev-button')} onClick={() => handlePrevSlide()}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"><path fill="currentColor" fillRule="evenodd" d="M7.74 12l6.03 7 1.49-1.34L10.38 12l4.88-5.66L13.77 5l-6.03 7z"></path></svg>
+                                <div style={{marginTop: '40px'}}>
+                                    <div className={cx('space-between')}>
+                                        <div className={cx('describe')}>MÔ TẢ</div>
+                                        <div style={{marginBottom: '20px'}}>
+                                            <div className={cx('describe-code-text')}>Mã sản phẩm:</div>
+                                            <div className={cx('describe-code-text')}>{product.id}</div>
+                                        </div>
+                                    </div>
+                                    <div className={cx('separator')}></div>
+
+                                    <div className={cx('describe-item-wrapper')}>
+                                        <div className={cx('space-between')} style={{width: '100%'}}>
+                                            <div className={cx('describe-title')}>Tổng quan</div>
+                                            <div className={cx('open-arrow')} 
+                                                ref={el => openArrowRef.current[0] = el}
+                                                onClick={() => hadleOpenArrow(0)}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className={cx('describe-popper')} ref={el => describePopper.current[0] = el}>
+                                        {product.overview.map((text, index) => {
+                                            return (
+                                                <Fragment key={index}>
+                                                    {text}
+                                                    <br/>
+                                                </Fragment>
+                                            )
+                                        })}
+                                    </div>
+                                    <div className={cx('separator')}></div>
+
+                                    <div className={cx('describe-item-wrapper')}>
+                                        <div className={cx('space-between')} style={{width: '100%'}}>
+                                            <div className={cx('describe-title')}>Chất liệu</div>
+                                            <div className={cx('open-arrow')} 
+                                                ref={el => openArrowRef.current[1] = el}
+                                                onClick={() => hadleOpenArrow(1)}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className={cx('describe-popper')} ref={el => describePopper.current[1] = el}>
+                                        <p className={cx('')}>Mã sản phẩm: {product.id}</p>
+                                        <p>Xin lưu ý mã số nhận diện của sản phẩm có thể có sự khác biệt, kể cả khi đó là cùng một mặt hàng</p>
+                                        {product.material.map((text, index) => {
+                                            return (
+                                                <Fragment key={index}>
+                                                    {text}
+                                                    <br/>
+                                                </Fragment>
+                                            )
+                                        })}
+                                    </div>
+                                    <div className={cx('separator')}></div>
+
                                 </div>
                             </div>
                         </div>
                         <div className={cx('card-right')}>
-
+                             
                         </div>
                     </div>
                 </div>
