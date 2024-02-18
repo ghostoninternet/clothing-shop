@@ -172,3 +172,333 @@
     letter-spacing: 0.16px;
     color: rgb(27, 27, 27);
 }
+
+.describe-popper-product-code {
+    padding-bottom: 20px;
+    line-height: 24px;
+    font-size: 15px;
+    letter-spacing: 0.16px;
+}
+
+.describe-popper-product-note {
+    letter-spacing: 0.16px;
+    line-height: 18px;
+    font-size: 15px;
+    color: rgb(27, 27, 27);
+}
+
+.product-material-text, .last-note {
+    color: rgb(27, 27, 27);
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    line-height: 19.2px;
+    margin-top: 4px;
+}
+
+.last-note {
+    letter-spacing: 0.16px;
+}
+
+.last-open-arrow {
+    transform: rotate(-90deg);
+}
+
+.star, .empty-star {
+    width: 15px;
+    height: 15px;
+    background-image: url('./review_star.svg');
+    background-position-x: -60px;
+    background-position-y: 0px;
+    background-size: 75px 15px;
+    margin-left: 3px;
+}
+
+.empty-star {
+    background-position-x: 0;
+}
+
+.evaluate-count {
+    font-size: 14px;
+    letter-spacing: 0.14px;
+    line-height: 16.156px;
+}
+
+.left-evaluate {
+    .css-select-star:nth-child(2) {
+        margin-left: 0;
+    }
+    .css-select-star:nth-child(6) {
+        margin-right: 8px;
+    }
+}
+
+.card-right {
+    width: 442px
+}
+
+.right-product-name {
+    color: rgb(27, 27, 27);
+    font-size: 45px;
+    letter-spacing: 0.45px;
+    line-height: 45px;
+    font-weight: 700;
+}
+
+.main-price {
+    letter-spacing: 0.34px;
+    line-height: 37.824px;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.product-note {
+    margin-top: 8px;
+    color: rgb(125, 125, 125);
+    letter-spacing: 0.16px;
+    line-height: 19.2px;
+    font-size: 16px;
+}
+
+.old-price {
+    margin-top: 8px;
+    text-decoration: line-through;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.32px;
+    line-height: 21.6px;
+}
+
+.limited-price {
+    color: rgb(255, 0, 0);
+    font-size: 32px;
+    letter-spacing: 0.34px;
+    line-height: 37.824px;
+    font-weight: 700;
+}
+
+.sale-text {
+    margin-top: 8px;
+    color: rgb(255, 0, 0);
+    letter-spacing: 0.16px;
+    line-height: 19.2px;
+    font-size: 16px;
+}
+
+.main-evaluate {
+    display: flex;
+    margin-top: 20px;
+}
+
+.main-evaluate {
+    .css-select-star:nth-child(1) {
+        margin-left: 0;
+    }
+    .css-select-star:nth-child(5) {
+        margin-right: 8px;
+    }
+}
+
+.main-description {
+    margin-top: 40px;
+    color: rgb(27, 27, 27);
+    letter-spacing: 0.16px;
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.main-separator {
+    border-top: 0.8px solid rgb(224, 224, 224);
+}
+
+.color-text {
+    margin-top: 20px;
+    letter-spacing: 0.28px;
+    line-height: 14px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.color-list {
+    margin-top: 16px;
+    display: flex;
+}
+
+.color-item-wrapper {
+    margin-right: 11px;
+    cursor: pointer;
+}
+
+.color-item {
+    display: flex;
+    background-position: center center;
+    width: 45px;
+    height: 45px;
+    background-size: 50px;
+}
+
+.size-table-wrapper {
+    display: flex;
+    cursor: pointer;
+    align-items: flex-end;
+}
+
+.size-table-icon {
+    background-image: url('./size_chart.svg');
+    background-size: 24px 24px;
+    height: 24px;
+    width: 24px;
+    margin-bottom: -3.6px;
+    margin-right: 7px;
+}
+
+.size-table-text {
+    text-decoration: underline;
+}
+
+.size-item {
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    padding: 0 10px;
+    display: flex;
+    border: 0.8px solid rgb(219, 214, 214);
+    color: rgb(27, 27, 27);
+    cursor: pointer;
+}
+
+.size-text {
+    color: inherit;
+    letter-spacing: 0.16px;
+    line-height: 12.6923px;
+    font-size: 11px;
+    min-width: 24px;
+    text-align: center;
+}
+
+.sold-out-size {
+    position: relative;
+    cursor: auto;
+    opacity: 0.8;
+}
+
+.sold-out-size::after {
+    background-color: rgba(255,255,255,0.3);
+    background-image: url('./chip_disabled.svg');
+    background-position: top left;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.dimensions-by-height {
+    margin-top: 20px;
+    padding: 8px 4px;
+    border: 0.8px solid rgb(125, 125, 125);
+    text-align: center;
+    letter-spacing: 0.16px;
+    line-height: 25px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.oder-count-text {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.26px;
+    line-height: 15.6px;
+    margin-bottom: 16px;
+}
+
+.oder-popper-wrapper {
+    width: 134px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px 0 15px;
+    border: 0.8px solid rgb(171, 171, 171);
+    height: 45px;
+}
+
+.product-nb-value {
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    line-height: 19.2px;
+    color: rgb(27, 27, 27);
+}
+
+.product-nb-popper {
+    position: absolute;
+    z-index: 1;
+    top: 44.4px;
+    left: -0.8px;
+    background-color: white;
+    
+    width: 134px;
+    border-left: 1px solid #757575;
+    border-right: 1px solid #757575;
+    border-bottom: 1px solid #757575;
+    display: none;
+}
+
+.product-nb-popper-value {
+    padding: 12px;
+    color: rgb(55, 134, 148);
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    line-height: 19.2px;
+    width: 134px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0,0,0,0.035);
+    }
+}
+
+.quantity-note {
+    margin-top: 8px;
+    letter-spacing: 0.14px;
+    line-height: 24px;
+    color: rgb(125, 125, 125);
+}
+
+.add-to-cart {
+    margin-top: 28px;
+    background-color: red;
+    color: white;
+    border: none;
+    letter-spacing: 0.16px;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    min-height: 45px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.add-to-wishlist {
+    width: 216px;
+    text-align: center;
+    color: rgb(27, 27, 27);
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    line-height: 25px;
+    font-weight: 700;
+    padding: 8px 4px;
+    border: 0.8px solid rgb(125, 125, 125);
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
