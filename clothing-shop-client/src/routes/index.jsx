@@ -8,6 +8,7 @@ import Signup from '../pages/Account/Signup'
 import Wishlist from '../pages/Account/Wishlist'
 import Cart from '../pages/Cart'
 import ProductDetail from '../pages/ProductDetail'
+import Admin from '../pages/Admin'
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -21,6 +22,7 @@ const publicRoutes = [
     { path: '/wishlist', component: Wishlist },
     { path: '/cart', component: Cart },
     { path: '/product/:productIdPath', component: ProductDetail },
+    { path: '/admin', component: Admin, layout: null },
 ]
 
 const privateRoutes = [
