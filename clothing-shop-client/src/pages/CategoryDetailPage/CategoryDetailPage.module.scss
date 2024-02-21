@@ -1,0 +1,174 @@
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+
+  .page-title {
+    font-size: 32px;
+  }
+
+  .result-container-title, .sort-by-container-title {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .sidebar-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.tab-container {
+  margin-bottom: 30px;
+  .tab-items-container {
+    display: flex;
+    width: 100%;
+    .tab-item-wrapper {
+      width: 25%;
+      .tab-item {
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+        opacity: 0.5;
+        padding: 10px;
+        border-bottom: 1px solid rgb(204, 203, 203);
+      }
+  
+      .tab-item-active {
+        opacity: 1;
+        border-bottom: 4px solid #378694;
+      }
+    }
+    
+  }
+}
+
+.result-sort-by-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  .result-container {
+    .result {
+      font-size: medium; 
+    }
+  }
+
+  .sort-by-container {
+    width: 15%;
+    .sort-by-choices {
+      .sort-by-choices-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 12px;
+        align-items: center;
+        border: 1px solid gray;
+        cursor: pointer;
+        
+        .open-close-icon-wrapper{
+          span {
+            width: 24px;
+            height: 24px;
+          }
+          .open-close-icon {
+            background-image: url("https://asset.uniqlo.com/g/icons/chevron_updown.svg");
+            font-size: 24px;
+            background-size: 72px 24px;
+            display: inline-block;
+          }
+
+          .open-close-icon-active {
+            background-image: url("https://asset.uniqlo.com/g/icons/chevron_updown.svg");
+            font-size: 24px;
+            background-size: 72px 24px;
+            display: inline-block;
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .choices-wrapper {
+        border: 1px solid gray;
+
+        .choice-item {
+          display: block;
+          padding: 12px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgb(250, 247, 247);
+            color: #378694;
+          }
+        }
+
+        .choice-item-active {
+          color: #378694;
+        }
+      }
+
+      .choices-wrapper-hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+.category-detail-product-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 100px;
+
+  .category-and-filter-sidebar-container {
+    width: 24.99%;
+    .category-container {
+      .category-item-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        margin-bottom: 5px;
+
+        .category-open-and-close-icon-wrapper {
+          span {
+            width: 24px;
+            height: 24px;
+          }
+          .category-open-and-close-icon {
+            font-size: 24px;
+            display: inline-block;
+          }
+
+          .category-open-and-close-icon-active {
+            font-size: 24px;
+            display: inline-block;
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .category-item-choices-wrapper {
+        margin-top: 10px;
+        padding: 0 20px;
+        .category-item-choice {
+          display: block;
+          margin-bottom: 8px;
+        }
+
+        .category-item-choice-active {
+          font-weight: bold;
+        }
+      }
+
+      .category-item-choices-wrapper-hidden {
+        display: none;
+      }
+    }
+  }
+
+  .category-product-container {
+    width: 74.99%;
+  }
+}

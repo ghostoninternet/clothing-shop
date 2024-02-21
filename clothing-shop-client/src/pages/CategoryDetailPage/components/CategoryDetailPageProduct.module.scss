@@ -1,0 +1,12 @@
+.category-product-wrapper {
+  .product-items-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 25px;
+    row-gap: 50px;
+
+    .product-item {
+      
+    }
+  }
+}

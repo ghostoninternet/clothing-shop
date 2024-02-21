@@ -37,55 +37,103 @@ function Header() {
                 [
                     {
                         title: "Áo",
-                        list: ["Tất Cả Áo", "Áo Thun", "Bra Tops", "Áo Sơ Mi & Áo Kiểu",
-                                "Áo Thun In Họa Tiết", "Áo Nỉ & Áo Hoodie", "Áo Len",
-                                "Áo Cardigan", "PEACE FOR ALL"]
+                        list: [
+                            ["Tất Cả Áo", "/women/tops/tops-collections"], 
+                            ["Áo Thun", "/women/tops/t-shirts"],
+                            ["Bra Tops", "/women/tops/bra-tops"], 
+                            ["Áo Sơ Mi & Áo Kiểu", "/women/tops/sweatshirts-and-hoodies"],
+                            ["Áo Thun In Họa Tiết", "/women/tops/ut-graphic-tees"],
+                            ["Áo Nỉ & Áo Hoodie", "/women/tops/sweatshirts-and-hoodies"],
+                            ["Áo Len", "/women/tops/sweaters"],
+                            ["Áo Cardigan", "/women/tops/cardigans"],
+                            ["PEACE FOR ALL", "/women/tops/peace-for-all"]
+                        ]
                     },
                     {
                         title: "SPORT UTILITY WEAR",
-                        list: ["Sport Utility Wear"]
+                        list: [["Sport Utility Wear", "/women/sport-utility-wear/sport-utility-wear"]]
                     },
                     {
                         title: "ĐỒ BẦU",
-                        list: ["Đồ Bầu", "Quần", "Đồ Mặc Trong"]
+                        list: [
+                            ["Đồ Bầu", "/women/maternity/maternity"],
+                            ["Quần", "/women/maternity/pants"],
+                            ["Đồ Mặc Trong", "/women/maternity/innerwear"]
+                        ]
                     },
                 ],
                 [
                     {
                         title: "ĐỒ MẶC NGOÀI",
-                        list: ["Tất Cả Đồ Mặc Ngoài", "Áo Blouson & Áo Parka", "Áo Khoác & Áo Blazer",
-                                "Áo Choàng Dáng Dài", "Áo Khoác Siêu Nhẹ & PUFFTECH"]
+                        list: [
+                            ["Tất Cả Đồ Mặc Ngoài", "/women/outerwear/outerwear-collections"],
+                            ["Áo Blouson & Áo Parka", "/women/outerwear/blouson"],
+                            ["Áo Khoác & Áo Blazer", "/women/outerwear/jackets"],
+                            ["Áo Choàng Dáng Dài", "/women/outerwear/coats"],
+                            ["Áo Khoác Siêu Nhẹ & PUFFTECH", "/women/outerwear/ultra-light-down"]
+                        ]
                     },
                     {
                         title: "ĐỒ MẶC TRONG & ĐỒ LÓT",
-                        list: ["Tất Cả Đồ Mặc Trong & Đồ Lót", "Áo Bra", "Bra Tops",
-                                "AIRism Đồ Mặc Trong", "Đồ Lót", "Quần Leggings và Quần Tất",
-                                "Tất", "HEATTECH Đồ Mặc Trong & Quần Lót Giữ Nhiệt"]
+                        list: [
+                            ["Tất Cả Đồ Mặc Trong & Đồ Lót", "/women/innerwear/innerwear-collections"],
+                            ["Áo Bra", "/women/innerwear/bra"],
+                            ["Bra Tops", "/women/innerwear/bratop"],
+                            ["AIRism Đồ Mặc Trong", "/women/innerwear/airism"],
+                            ["Đồ Lót", "/women/innerwear/underwear"],
+                            ["Quần Leggings và Quần Tất", "/women/innerwear/leggings-and-tights"],
+                            ["Tất", "/women/innerwear/socks"],
+                            ["HEATTECH Đồ Mặc Trong & Quần Lót Giữ Nhiệt", "/women/innerwear/heattech"]
+                        ]
                     },
                 ],
                 [
                     {
                         title: "QUẦN",
-                        list: ["Tất Cả Quần", "Quần Short", "Quần Jeans",
-                                "Quần Easy Pants", "Quần Ống Rộng", "Quần Dài Đến Mắt Cá & Quần Lửng",
-                                "Quần Nỉ", "Quần Legging", "Quần Tây"]
+                        list: [
+                            ["Tất Cả Quần", "/women/bottoms/bottoms-collections"],
+                            ["Quần Short", "/women/bottoms/shorts"],
+                            ["Quần Jeans", "/women/bottoms/jeans"],
+                            ["Quần Easy Pants", "/women/bottoms/casual-pants"],
+                            ["Quần Ống Rộng", "/women/bottoms/wide-pants"],
+                            ["Quần Dài Đến Mắt Cá & Quần Lửng", "/women/bottoms/ankle-pants-and-cropped-pants"],
+                            ["Quần Nỉ", "/women/bottoms/sweat-pants"], 
+                            ["Quần Legging", "/women/bottoms/leggings-pants"], 
+                            ["Quần Tây", "/women/bottoms/trousers"]
+                        ]
                     },
                     {
                         title: "ĐỒ MẶC NHÀ",
-                        list: ["Tất Cả Đồ Mặc Nhà", "Quần Easy & Relaxed",
-                                "Đồ Mặc Nhà & Pyjama", "Dép Đi Trong Nhà"]
+                        list: [
+                            ["Tất Cả Đồ Mặc Nhà", "/women/loungewear-and-homewear/loungewear-collections"],
+                            ["Quần Easy & Relaxed", "/women/loungewear-and-homewear/easy-and-relaxed-pants"],
+                            ["Đồ Mặc Nhà & Pyjama", "/women/loungewear-and-homewear/loungewear"],
+                            ["Dép Đi Trong Nhà", "/women/loungewear-and-homewear/room-shoes"]
+                        ]
                     },
                 ],
                 [
                     {
                         title: "ĐẦM & CHÂN VÁY",
-                        list: ["Đầm & Jumpsuit", "CHÂN VÁY"]
+                        list: [
+                            ["Đầm & Jumpsuit", "/women/dresses-and-jumpsuits/dresses-and-jumpsuits"],
+                            ["CHÂN VÁY", "/women/dresses-and-jumpsuits/skirts"]
+                        ]
                     },
                     {
                         title: "PHỤ KIỆN",
-                        list: ["Tất Cả Phụ Kiện", "Túi", "Giày & Sandals", "Kính Mát",
-                                "Mũ & Mũ Lưỡi Trai", "Thắt Lưng", "Ô",
-                                "Khăn Choàng & Khăn Quàng Cổ", "Găng Tay", "Khác"]
+                        list: [
+                            ["Tất Cả Phụ Kiện", "/women/accessories/accessories-collections"],
+                            ["Túi", "/women/accessories/bags"],
+                            ["Giày & Sandals", "/women/accessories/shoes-and-boots"],
+                            ["Kính Mát", "/women/accessories/fashion-glasses"],
+                            ["Mũ & Mũ Lưỡi Trai", "/women/accessories/hats"],
+                            ["Thắt Lưng", "/women/accessories/belts"],
+                            ["Ô", "/women/accessories/umbrellas"],
+                            ["Khăn Choàng & Khăn Quàng Cổ", "/women/accessories/scarves"],
+                            ["Găng Tay", "/women/accessories/gloves"],
+                            ["Khác", "/women/accessories/others"]
+                        ]
                     },
                 ],
             ],
@@ -114,46 +162,87 @@ function Header() {
                 [
                     {
                         title: "Áo",
-                        list: ["Tất Cả Áo", "Áo Polo", "Áo Thun", "Áo Thun In Họa Tiết",
-                                "Áo Sơ Mi Công Sở", "Áo Sơ Mi Casual", "Áo Nỉ & Hoodie",
-                                "Áo Len & Cardigan", "PEACE FOR ALL"]
+                        list: [
+                            ["Tất Cả Áo", "/men/tops/tops-collections"],
+                            ["Áo Polo", "/men/tops/polo-shirts"],
+                            ["Áo Thun", "/men/tops/t-shirts"],
+                            ["Áo Thun In Họa Tiết", "/men/tops/ut-graphic-tees"],
+                            ["Áo Sơ Mi Công Sở", "/men/tops/dress-shirts"],
+                            ["Áo Sơ Mi Casual", "/men/tops/casual-shirts"],
+                            ["Áo Nỉ & Hoodie", "/men/tops/sweatshirts-and-hoodies"],
+                            ["Áo Len & Cardigan", "/men/tops/sweaters"],
+                            ["PEACE FOR ALL", "/men/tops/peace-for-all"]
+                        ]
                     },
                     {
                         title: "SPORT UTILITY WEAR",
-                        list: ["Sport Utility Wear"]
+                        list: [["Sport Utility Wear", "/men/sport-utility-wear/sport-utility-wear"]]
                     },
                 ],
                 [
                     {
                         title: "ĐỒ MẶC NGOÀI",
-                        list: ["Tất Cả Đồ Mặc Ngoài", "Áo Blouson & Áo Parka", "Áo Khoác Miracle Air",
-                                "Áo Khoác & Áo Blazer", "Áo Choàng Dáng Dài", "Áo Khoác Siêu Nhẹ & PUFFTECH"]
+                        list: [
+                            ["Tất Cả Đồ Mặc Ngoài", "/men/outerwear/outerwear-collections"],
+                            ["Áo Blouson & Áo Parka", "/men/outerwear/blouson-and-parkas"],
+                            ["Áo Khoác Miracle Air", "/men/outerwear/airsense-jackets"],
+                            ["Áo Khoác & Áo Blazer", "/men/outerwear/jackets"],
+                            ["Áo Choàng Dáng Dài", "/men/outerwear/coats"],
+                            ["Áo Khoác Siêu Nhẹ & PUFFTECH", "/men/outerwear/ultra-light-down"]
+                        ]
                     },
                     {
                         title: "ĐỒ MẶC TRONG & ĐỒ LÓT",
-                        list: ["Tất Cả Đồ Mặc Trong & Đồ Lót", "AIRism Đồ Mặc Trong", "Quần Lót Boxer & Brief",
-                                "Tất", "HEATTECH Đồ Mặc Trong & Quần Lót Giữ Nhiệt", "Quần Leggings và Quần Tất"]
+                        list: [
+                            ["Tất Cả Đồ Mặc Trong & Đồ Lót", "/men/innerwear/innerwear-collections"],
+                            ["AIRism Đồ Mặc Trong", "/men/innerwear/airism"], 
+                            ["Quần Lót Boxer & Brief", "/men/innerwear/underwear"],
+                            ["Tất", "/men/innerwear/socks"], 
+                            ["HEATTECH Đồ Mặc Trong & Quần Lót Giữ Nhiệt", "/men/innerwear/heattech"], 
+                            ["Quần Leggings và Quần Tất", "/men/innerwear/leggings-and-tights"]
+                        ]
                     },
                 ],
                 [
                     {
                         title: "QUẦN",
-                        list: ["Tất Cả Quần", "Quần Short", "Quần Jean & Quần Jean Màu",
-                                "Quần Dài Đến Mắt Cá", "Quần Miracle Air", "Quần Casual",
-                                "Quần Dài Dáng Rộng", "Quần Chino", "Quần Nỉ", "Quần Tây"]
+                        list: [
+                            ["Tất Cả Quần", "/men/bottoms/bottoms-collections"],
+                            ["Quần Short", "/men/bottoms/shorts"],
+                            ["Quần Jean & Quần Jean Màu", "/men/bottoms/jeans"],
+                            ["Quần Dài Đến Mắt Cá", "/men/bottoms/ankle-pants"],
+                            ["Quần Miracle Air", "/men/bottoms/airsense-pants"],
+                            ["Quần Casual", "/men/bottoms/easy-pants"],
+                            ["Quần Dài Dáng Rộng", "/men/bottoms/wide-leg-pants"],
+                            ["Quần Chino", "/men/bottoms/chinos"],
+                            ["Quần Nỉ", "/men/bottoms/sweat-pants"],
+                            ["Quần Tây", "/men/bottoms/trousers"]
+                        ]
                     },
                     {
                         title: "ĐỒ MẶC NHÀ",
-                        list: ["Tất Cả Đồ Mặc Nhà", "Đồ Mặc Nhà & Pyjama",
-                                "Quần Easy & Relaxed", "Dép Đi Trong Nhà"]
+                        list: [
+                            ["Tất Cả Đồ Mặc Nhà", "/men/loungewear-and-homewear/loungewear-collections"],
+                            ["Đồ Mặc Nhà & Pyjama", "/men/loungewear-and-homewear/loungewear"],
+                            ["Quần Easy & Relaxed", "/men/loungewear-and-homewear/easy-and-relaxed-pants"],
+                            ["Dép Đi Trong Nhà", "/men/loungewear-and-homewear/room-shoes"]
+                        ]
                     },
                 ],
                 [
                     {
                         title: "PHỤ KIỆN",
-                        list: ["Tất Cả Phụ Kiện", "Túi", "Kính Mát", "Mũ & Mũ Lưỡi Trai",
-                                "Thắt Lưng", "Ô", "Khăn Choàng & Khăn Quàng Cổ",
-                                "Găng Tay", "Khác"]
+                        list: [
+                            ["Tất Cả Phụ Kiện", "/men/accessories/accessories-collections"],
+                            ["Túi", "/men/accessories/bags"],
+                            ["Kính Mát", "/men/accessories/fashion-glasses"],
+                            ["Mũ & Mũ Lưỡi Trai", "/men/accessories/hats-and-caps"],
+                            ["Thắt Lưng", "/men/accessories/belts"],
+                            ["Ô", "/men/accessories/umbrellas"],
+                            ["Khăn Choàng & Khăn Quàng Cổ", "/men/accessories/scarves"],
+                            ["Găng Tay", "/men/accessories/gloves"],
+                            ["Khác", "/men/accessories/others"]
+                        ]
                     },
                 ],
             ],
@@ -182,43 +271,66 @@ function Header() {
                 [
                     {
                         title: "Áo",
-                        list: ["Tất Cả Áo", "Áo Thun In Họa Tiết", "Áo Thun + Áo Polo", "Áo Nỉ & Hoodie",
-                                "Áo Sơ Mi & Áo Kiểu", "Áo Len & Áo Cardigan"]
+                        list: [
+                            ["Tất Cả Áo", "/kids/tops/tops-collections"], 
+                            ["Áo Thun In Họa Tiết", "/kids/tops/ut-graphic-tees"],
+                            ["Áo Thun + Áo Polo", "/kids/tops/t-shirts"],
+                            ["Áo Nỉ & Hoodie", "/kids/tops/sweatshirts-and-hoodies"],
+                            ["Áo Sơ Mi & Áo Kiểu", "/kids/tops/shirts-and-blouses"],
+                            ["Áo Len & Áo Cardigan", "/kids/tops/sweaters-and-cardigans"]
+                        ]
                     },
                     {
                         title: "SPORT UTILITY WEAR",
-                        list: ["Sport Utility Wear"]
+                        list: [["Sport Utility Wear", "/kids/sport-utility-wear/sport-utility-wear"]]
                     },
                 ],
                 [
                     {
                         title: "ĐỒ MẶC NGOÀI",
-                        list: ["Tất Cả Đồ Mặc Ngoài", "Áo Blouson & Áo Parka", "Áo Khoác"]
+                        list: [
+                            ["Tất Cả Đồ Mặc Ngoài", "/kids/outerwear/outerwear-collections"],
+                            ["Áo Blouson & Áo Parka", "/kids/outerwear/blouson-and-parkas"],
+                            ["Áo Khoác", "/kids/outerwear/jackets-and-coats"]
+                        ]
                     },
                     {
                         title: "ĐỒ MẶC TRONG & ĐỒ LÓT",
-                        list: ["Tất Cả Đồ Mặc Trong & Đồ Lót", "AIRism Đồ Mặc Trong", "Đồ Lót",
-                                "Áo Bra và Bra Tops", "Tất", "HEATTECH Đồ Mặc Trong & Quần Lót Giữ Nhiệt",]
+                        list: [
+                            ["Tất Cả Đồ Mặc Trong & Đồ Lót", "/kids/innerwear/innerwear-collections"],
+                            ["AIRism Đồ Mặc Trong", "/kids/innerwear/airism"],
+                            ["Đồ Lót", "/kids/innerwear/underwear"],
+                            ["Áo Bra và Bra Tops", "/kids/innerwear/bras-and-bra-top"],
+                            ["Tất", "/kids/innerwear/socks"],
+                            ["HEATTECH Đồ Mặc Trong & Quần Lót Giữ Nhiệt", "/kids/innerwear/heattech"]
+                        ]
                     },
                 ],
                 [
                     {
                         title: "QUẦN",
-                        list: ["Tất Cả Quần", "Quần Short", "Quần Dài"]
+                        list: [
+                            ["Tất Cả Quần", "/kids/bottoms/bottoms-collections"],
+                            ["Quần Short", "/kids/bottoms/shorts"],
+                            ["Quần Dài", "/kids/bottoms/pants"]
+                        ]
                     },
                     {
                         title: "ĐỒ MẶC NHÀ",
-                        list: ["Đồ Mặc Nhà & Pyjama"]
+                        list: [["Đồ Mặc Nhà & Pyjama", "/kids/loungewear-and-homewear/loungewear"]]
                     },
                 ],
                 [
                     {
                         title: "ĐẦM & CHÂN VÁY",
-                        list: ["Đầm", "Chân Váy"]
+                        list: [
+                            ["Đầm", "/kids/dresses-and-jumpsuits/dresses-and-jumpsuits"], 
+                            ["Chân Váy", "/kids/dresses-and-jumpsuits/skirts"]
+                        ]
                     },
                     {
                         title: "PHỤ KIỆN",
-                        list: ["Tất Cả Phụ Kiện"]
+                        list: [["Tất Cả Phụ Kiện", "/kids/accessories/accessories-collections"]]
                     },
                 ],
             ],
@@ -247,15 +359,28 @@ function Header() {
                 [
                     {
                         title: "TRẺ SƠ SINH (0-1 NĂM)",
-                        list: ["Tất Cả Đồ Trẻ Sơ Sinh", "Đồ Liền Mảnh", "Bodysuit",
-                                "Áo Thun In Họa Tiết", "Tất"]
+                        list: [
+                            ["Tất Cả Đồ Trẻ Sơ Sinh", "/baby/newborn/all-newborn"], 
+                            ["Đồ Liền Mảnh", "/baby/newborn/one-pieces"], 
+                            ["Bodysuit", "/baby/newborn/bodysuits"],
+                            ["Áo Thun In Họa Tiết", "/baby/newborn/ut-graphic-tees"], 
+                            ["Tất", "/baby/newborn/socks"]
+                        ]
                     },
                 ],
                 [
                     {
                         title: "TRẺ NHỎ (6 THÁNG - 5 NĂM)",
-                        list: ["All Toddlers", "Đồ Mặc Nhà & Pyjama", "Quần Dài & Quần Legging",
-                                "Áo", "Áo Thun In Họa Tiết", "Đồ Mặc Ngoài", "Tất", "Phụ Kiện"]
+                        list: [
+                            ["All Toddlers", "/baby/toddler/all-toddlers"], 
+                            ["Đồ Mặc Nhà & Pyjama", "/baby/toddler/pajamas"],
+                            ["Quần Dài & Quần Legging", "/baby/toddler/bottoms"],
+                            ["Áo", "/baby/toddler/tops"],
+                            ["Áo Thun In Họa Tiết", "/baby/toddler/ut-graphic-tees"],
+                            ["Đồ Mặc Ngoài", "/baby/toddler/outerwear"],
+                            ["Tất", "/baby/toddler/socks"],
+                            ["Phụ Kiện", "/baby/toddler/accessories"]
+                        ]
                     },
                 ]
             ],
@@ -331,8 +456,8 @@ function Header() {
                                                                         <div className={cx('left-type')} key={indexY}>
                                                                             <div className={cx('segmentation-title')}>{Y.title}</div>
                                                                             {Y.list.map((Z, indexZ) => (
-                                                                                <Link className={cx('popper-text-content')} key={indexZ}>
-                                                                                    {Z}
+                                                                                <Link to={Z[1]} className={cx('popper-text-content')} key={indexZ}>
+                                                                                    {Z[0]}
                                                                                 </Link>
                                                                             ))}
                                                                         </div>
