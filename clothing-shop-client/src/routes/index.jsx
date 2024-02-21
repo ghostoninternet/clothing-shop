@@ -9,6 +9,7 @@ import Wishlist from '../pages/Account/Wishlist'
 import Cart from '../pages/Cart'
 import ProductDetail from '../pages/ProductDetail'
 import CategoryDetailPage from '../pages/CategoryDetailPage'
+import Admin from '../pages/Admin'
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -26,6 +27,7 @@ const publicRoutes = [
     { path: '/kids/:productType/:productTypeCollection', component: CategoryDetailPage},
     { path: '/baby/:productType/:productTypeCollection', component: CategoryDetailPage},
     { path: '/product/:productIdPath', component: ProductDetail },
+    { path: '/admin', component: Admin, layout: null },
 ]
 
 const privateRoutes = [

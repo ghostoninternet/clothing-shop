@@ -1,0 +1,36 @@
+.revenue-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.34px;
+    line-height: 34px;
+    margin-left: 30px;
+    margin-top: 26px;
+    min-width: 600px;
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    min-width: 900px;
+}
+
+.table {
+    width: 80%;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+.table tr {
+    height: 50px;
+    border-bottom: 1px solid rgb(222, 226, 230);
+}
+
+.table tbody tr:hover {
+    background-color: rgb(242, 242, 242);
+}
+
+.table th, td {
+    text-align: left;
+    padding: 0 10px;
+}

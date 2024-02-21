@@ -62,10 +62,10 @@ function Login() {
                             </div>
                             <TextButton href={'#'}>ĐĂNG NHẬP</TextButton>
                             <div className={cx('forgot-password')}>
-                                <a href="/password/reset"
+                                <Link to="/password/reset"
                                     className={cx('policy-heading')}>
                                     QUÊN MẬT KHẨU CỦA BẠN?
-                                </a>
+                                </Link>
                             </div>
                         </form>
                     </div>
@@ -77,7 +77,7 @@ function Login() {
                         <div className='auth-account-text' style={{marginBottom: '40px'}}>
                             Hãy tạo tài khoản ngay ! Bạn có thể nhận được các dịch vụ đặc biệt cho riêng bạn như kiểm tra lịch sử mua hàng và nhận phiếu giảm giá cho thành viên. Đăng ký miễn phí ngay hôm nay!
                         </div>
-                        <TextButton href={'/signup'}>TẠO TÀI KHOẢN</TextButton>
+                        <TextButton to={'/signup'}>TẠO TÀI KHOẢN</TextButton>
                     </div>
                 </div>
             </div>
