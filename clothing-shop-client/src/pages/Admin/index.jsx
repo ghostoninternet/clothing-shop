@@ -5,9 +5,9 @@ import { Logo } from '../../components/SvgIcon';
 import { Fragment, useEffect, useRef } from 'react';
 
 import {CalendarIcon, ClothesIcon, LocationIcon, RevenueIcon, UserIcon} from './icon/sideBarIcon'
-import Revenue from './components/revenue/index,';
 import Product from './components/Product';
 import Customer from './components/Customer';
+import Revenue from './components/Revenue';
 const cx = classNames.bind(styles)
 
 
@@ -184,7 +184,7 @@ function Admin() {
     let filter = searchParams.get('filter')
     switch (q) {
         case 'Doanh Thu':
-            ContentComp = Revenue   
+            ContentComp = Revenue
             break;
         case 'Sản Phẩm':
             ContentComp = Product
