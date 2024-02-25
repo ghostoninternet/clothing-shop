@@ -1,0 +1,220 @@
+.product-component-wrapper {
+    width: 80%;
+    min-width: 900px;
+    margin: 26px auto 0 auto;
+    position: relative;
+}
+
+.product-wrapper {
+    display: flex;
+}
+
+.product-wrapper ~ .product-wrapper {
+    padding-top: 28px;
+    margin-bottom: 28px;
+    border-top: 0.8px solid rgb(218, 218, 218);
+}
+
+.product-wrapper:first-child {
+    margin-bottom: 28px;
+}
+
+.img-wrapper {
+    width: 216px;
+}
+
+.product-img {
+    width: 100%;
+}
+
+
+.info-wrapper {
+    position: relative;
+    padding-left: 20px;
+    width: 554px;
+}
+
+.product-info-name {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+}
+
+.product-info input {
+    width: calc(100% - 30px);
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+.product-info-id, .product-info-color, .product-info-size, .limited-time, .limited-price, .product-nb-value {
+    color: rgb(125, 125, 125);
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    line-height: 19.2px;
+    margin-bottom: 8px;
+}
+
+.product-info-color, .product-info-size {
+    color: rgb(27, 27, 27);
+}
+
+.limited-time {
+    color: rgb(255, 0, 0);
+    margin-bottom: 24px;
+}
+
+.limited-price {
+    color: rgb(255, 0, 0);
+}
+
+.price-wrapper {
+    margin-top: 16px;
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+    color: rgb(27, 27, 27);
+}
+
+.product-nb-text {
+    margin-top: 12px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: rgb(27, 27, 27);
+    font-weight: 700;
+    letter-spacing: 0.26px;
+    line-height: 15.6px;
+}
+
+.remove-product {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    background-image: url('../../../../components/CartItem/remove.svg');
+    cursor: pointer;
+}
+
+.remove-limited {
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    background-image: url('../../../../components/CartItem/remove.svg');
+    cursor: pointer;
+}
+
+.add-limited {
+    margin-top: 24px;
+    width: 12px;
+    height: 12px;
+    background-size: 12px 12px;
+    background-image: url('../../icon/plus.svg');
+    cursor: pointer;
+}
+
+.product-nb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px 0 15px;
+    border: 0.8px solid rgb(171, 171, 171);
+    width: 134px;
+    height: 45px;
+}
+
+.product-nb-value {
+    margin-bottom: 0;
+    color: rgb(27, 27, 27);
+}
+
+.chevron_updown {
+    background-image: url('./chevron_updown.svg');
+    background-size: 72px 24px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.product-footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-total-text {
+    color: rgb(27, 27, 27);
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    line-height: 19.5556px;
+}
+
+.product-total-value {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 24.4445px;
+}
+
+#upload-main-image {
+    display: none;
+}
+
+.image-upload-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-main-image-lable {
+    cursor: pointer;
+    border: 0.8px solid rgb(218, 218, 218);
+    padding: 5px 10px;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.add-product-button {
+    line-height: 34px;
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 0 18px;
+    border: 1px solid red;
+    border-radius: 3px;
+    background-color: red;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    width: 173px;
+    position: absolute;
+    top: -62px;
+}
+
+.image-upload-wrapper input {
+    display: none;
+}
+
+.add-new-product-button {
+    line-height: 34px;
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 0 18px;
+    border: 1px solid red;
+    border-radius: 3px;
+    background-color: red;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    width: 85px;
+}

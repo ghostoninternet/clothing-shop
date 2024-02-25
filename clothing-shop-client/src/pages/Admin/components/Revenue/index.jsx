@@ -3,7 +3,7 @@ import styles from './Revenue.module.scss'
 
 const cx = classNames.bind(styles)
 
-function Revenue( { query, filter} ) {
+function Revenue( { query, filter } ) {
     let dataIndex = 0
     if (filter) {
         switch (filter) {
@@ -141,7 +141,7 @@ function Revenue( { query, filter} ) {
                     <tbody>
                         {data[dataIndex].product.map((productInfo, i) => {
                             return (
-                                <tr>
+                                <tr key={i}>
                                     <th scope="row">{i+1}</th>
                                     <td>{productInfo.id}</td>
                                     <td>{productInfo.colorCode}</td>
