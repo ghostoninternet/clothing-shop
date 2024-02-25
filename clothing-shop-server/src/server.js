@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import cookieParser from 'cookie-parser'
 import { corsOptions } from './config/corsConfig.js'
 import { connectDB } from './config/mongodbConnection.js'
 import { router } from './routes/index.js'
@@ -12,17 +13,8 @@ function start() {
   const app = express()
 
   app.use(cors(corsOptions))
+  app.use(cookieParser())
   app.use(express.json())
-
-  app.use((req, res, next) => {
-    console.log("Hi there !! This is the first middleware!! We are inside application-level middleware")
-    next()
-  })
-
-  app.use('/', (req, res, next) => {
-    console.log("Ok!! We are inside the second application-level middleware")
-    next()
-  })
 
   app.use('/', router)
 
