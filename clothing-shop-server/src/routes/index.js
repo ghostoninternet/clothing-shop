@@ -1,5 +1,6 @@
 import express from 'express'
-import { productRoute } from './product'
+import { productRoute } from './product.js'
+import { authenticationRouter } from './authentication.js'
 
 export const router = express.Router()
 
@@ -22,6 +23,4 @@ export const router = express.Router()
 
 router.use('/product', productRoute)
 
-router.use('/auth', authenticateRouter)
-
-authenticateRouter.post('login')
+router.use('/auth', authenticationRouter)
