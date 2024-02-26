@@ -35,7 +35,8 @@ function Login() {
             const response = await authenticateAPIs.loginAPI(data)
             console.log(response)
             userData.setUser(response)
-            navigate('/')
+            if (gmail == "admin123@gmail.com") navigate('/admin')
+            else navigate('/')
         } catch (error) {
             console.log(error)
         }
