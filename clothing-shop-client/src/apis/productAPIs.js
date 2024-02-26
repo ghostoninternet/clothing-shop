@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { baseUrl } from '../utils/constants/baseUrl'
+import { baseUrl } from '../utils/constants/baseUrl.js'
 
 const getMenProducts = async () => {
   try {
