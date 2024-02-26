@@ -1,20 +1,45 @@
 import classNames from 'classnames/bind'
 import styles from './Login.module.scss'
-import { Fragment, useEffect } from 'react';
+import { Fragment, useContext, useEffect, useState } from 'react';
 import { Logo } from '../../../components/SvgIcon'
 import Account from '..';
 import Input from '../../../components/Input';
 import TextButton from '../../../components/TextButton';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { authenticateAPIs } from '../../../apis/authenticateAPIs';
+import { UserData } from '../../../context/UserContext';
 
 
 const cx = classNames.bind(styles)
 
 function Login() {
+    const userData = useContext(UserData)
+    const [gmail, setGmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const navigate = useNavigate()
+
     useEffect(() => {
         document.title = 'Đăng nhập';
     }, []);
     
+    const handleLoginFormSubmit = async (e) => {
+        e.preventDefault()
+        const data = {
+            gmail,
+            password,
+        }
+        setGmail('')
+        setPassword('')
+        try {
+            const response = await authenticateAPIs.loginAPI(data)
+            console.log(response)
+            userData.setUser(response)
+            navigate('/')
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     const handlePasswordClick = () => {
         var xPassword = document.getElementById("inputPassword");
@@ -44,11 +69,12 @@ function Login() {
                         <div className='auth-account-text'>
                             Đăng nhập bằng địa chỉ email và mật khẩu của bạn.
                         </div>
-                        <form method='post' action="/">
-                           <Input title={'ĐỊA CHỈ EMAIL'} type={'email'}
+                        <form method='post' action="/" onSubmit={handleLoginFormSubmit}>
+                           <Input title={'ĐỊA CHỈ EMAIL'} type={'email'} value={gmail} setValue={setGmail}
                                 placeholder={'Nhập email hợp lệ'} mgBottom='20px'>
                            </Input>
-                           <Input title={'MẬT KHẨU'} type={'password'} mgBottom={'20px'} showPasswordFnc={handlePasswordClick}>
+                           <Input title={'MẬT KHẨU'} type={'password'} value={password} setValue={setPassword}
+                                mgBottom={'20px'} showPasswordFnc={handlePasswordClick}>
                            </Input>
                            <div className={cx('policy')}> 
                                     <a href="https://faq-vn.uniqlo.com/articles/vi/FAQ/%C4%90i%E1%BB%81u-kho%E1%BA%A3n-s%E1%BB%AD-d%E1%BB%A5ng"
@@ -60,7 +86,7 @@ function Login() {
                                         CHÍNH SÁCH BẢO MẬT
                                     </a>
                             </div>
-                            <TextButton href={'#'}>ĐĂNG NHẬP</TextButton>
+                            <TextButton>ĐĂNG NHẬP</TextButton>
                             <div className={cx('forgot-password')}>
                                 <Link to="/password/reset"
                                     className={cx('policy-heading')}>

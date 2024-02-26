@@ -3,14 +3,14 @@ import styles from './Input.module.scss'
 import { Fragment } from "react";
 const cx = classNames.bind(styles)
 
-function Input({ title, type, placeholder, mgBottom, showPasswordFnc, signup=false, width }) {
+function Input({ title, type, placeholder, mgBottom, showPasswordFnc, signup=false, width, value, setValue }) {
     if (type == 'password') {
         if (signup)
             return (
                 <div style={{marginBottom: mgBottom}}>
                     <div style={{display: 'flex'}}>
                         <div className={'auth-account-heading ' + cx('auth-account-heading')}>{title}</div>
-                        <input type={type} className='auth-account-input'
+                        <input type={type} className='auth-account-input' value={value} onChange={(e) => setValue(e.target.value)}
                                 required placeholder={placeholder} id="inputPassword"/>
                     </div>
                     <div style={{display: 'flex'}}>
@@ -29,11 +29,12 @@ function Input({ title, type, placeholder, mgBottom, showPasswordFnc, signup=fal
         return (
             <div style={{marginBottom: mgBottom}}>
                 <div className='auth-account-heading'>{title}</div>
-                <input type={type} className='auth-account-input'
+                <input type={type} className='auth-account-input' value={value} onChange={(e) => setValue(e.target.value)}
                         required placeholder={placeholder} id="inputPassword"/>
                 <p className='auth-account-note-text'>Mật khẩu cần có ít nhất 08 ký tự (bao gồm cả chữ và số). Chỉ có thể sử dụng các ký tự đặc biệt này -_.@</p>
                 <div className='show-password'> 
-                    <input className='show-password-input' type="checkbox" id="showPassword" onClick={showPasswordFnc}/>
+                    <input className='show-password-input' type="checkbox"
+                        id="showPassword" onClick={showPasswordFnc}/>
                     <label htmlFor="checkbox1">
                         <span className='show-password-text'>Hiện mật khẩu</span>
                     </label>
@@ -49,7 +50,7 @@ function Input({ title, type, placeholder, mgBottom, showPasswordFnc, signup=fal
                         <div style={{display: 'flex'}}>
                             <div className={'auth-account-heading ' + cx('auth-account-heading')}>{title}</div>
                             <div style={{width: '100%'}}>
-                                <input style={{width: width}} type={type} className='auth-account-input'
+                                <input style={{width: width}} type={type} className='auth-account-input' value={value} onChange={(e) => setValue(e.target.value)}
                                         required placeholder={placeholder}/>
                             </div>
                         </div>
@@ -71,13 +72,13 @@ function Input({ title, type, placeholder, mgBottom, showPasswordFnc, signup=fal
                         <div style={{fontSize: '18px'}} className={'auth-account-heading ' + cx('auth-account-heading')}>{title}</div>
                         <div style={{width: '100%', display: 'flex'}}>
                             <input type={type} className={'auth-account-input ' + cx('radio-input')}
-                                    required placeholder={placeholder} name="gender" value='Nam' id="Nam"/>
+                                    required placeholder={placeholder} name="gender" value='Nam' id="Nam" onChange={(e) => setValue(e.target.value)}/>
                             <label htmlFor="Nam">Nam</label>
                             <input type={type} className={'auth-account-input ' + cx('radio-input')}
-                                    required placeholder={placeholder} name="gender" value='Nữ' id="Nữ"/>
+                                    required placeholder={placeholder} name="gender" value='Nữ' id="Nữ" onChange={(e) => setValue(e.target.value)}/>
                             <label htmlFor="Nữ">Nữ</label>
                             <input type={type} className={'auth-account-input ' + cx('radio-input')}
-                                    required placeholder={placeholder} name="gender" value='Bỏ Chọn' id="Bỏ Chọn"/>
+                                    required placeholder={placeholder} name="gender" value='Bỏ Chọn' id="Bỏ Chọn" onChange={(e) => setValue(e.target.value)}/>
                             <label htmlFor="Bỏ Chọn">Bỏ Chọn</label>
                         </div>
                     </div>
@@ -90,7 +91,7 @@ function Input({ title, type, placeholder, mgBottom, showPasswordFnc, signup=fal
                 <div style={{marginBottom: mgBottom, display: 'flex'}}>
                     <div className={'auth-account-heading ' + cx('auth-account-heading')}>{title}</div>
                     <div style={{width: '100%'}}>
-                        <input style={{width: width}} type={type} className='auth-account-input'
+                        <input style={{width: width}} type={type} className='auth-account-input' value={value} onChange={(e) => setValue(e.target.value)}
                                 required placeholder={placeholder}/>
                     </div>
                 </div>
@@ -102,7 +103,7 @@ function Input({ title, type, placeholder, mgBottom, showPasswordFnc, signup=fal
         <Fragment>
             <div style={{marginBottom: mgBottom}}>
                 <div className='auth-account-heading'>{title}</div>
-                <input type={type} className='auth-account-input'
+                <input type={type} className='auth-account-input' value={value} onChange={(e) => setValue(e.target.value)}
                         required placeholder={placeholder}/>
             </div>
         </Fragment>

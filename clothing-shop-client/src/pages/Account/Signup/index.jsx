@@ -1,18 +1,28 @@
-import { Fragment, useEffect } from 'react';
-import PathText from '../../../components/PathText';
-
+import { Fragment, useContext, useEffect, useState } from 'react'
+import PathText from '../../../components/PathText'
 
 import classNames from 'classnames/bind'
 import styles from './Signup.module.scss'
 import Account from '..';
-import Input from '../../../components/Input';
-import TextButton from '../../../components/TextButton';
-
+import Input from '../../../components/Input'
+import TextButton from '../../../components/TextButton'
+import { UserData } from '../../../context/UserContext';
+import { useNavigate } from 'react-router-dom';
+import { authenticateAPIs } from '../../../apis/authenticateAPIs';
 
 const cx = classNames.bind(styles)
 
 function Signup() {
+    const userData = useContext(UserData)
+    const [gmail, setGmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [dateOfBirth, setDataOfBirth] = useState('')
+    const [gender, setGender] = useState('')
+    
+    const navigate = useNavigate()
+
     useEffect(() => {
+        console.log(userData)
         document.title = 'Tạo tài khoản';
     }, []);
 
@@ -25,6 +35,30 @@ function Signup() {
             text: 'TẠO TÀI KHOẢN',
         },
     ]
+
+    const handleSignUpFormSubmit = async (e) => {
+        e.preventDefault()
+        const data = {
+            gmail,
+            password,
+            gender,
+            dateOfBirth
+        }
+
+        setGmail('')
+        setPassword('')
+        setGender('')
+        setDataOfBirth('')
+
+        try {
+            const response = await authenticateAPIs.signupAPI(data)
+            console.log(response)
+            userData.setUser(response)
+            navigate('/')
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     const handlePasswordClick = () => {
         var xPassword = document.getElementById("inputPassword");
@@ -48,16 +82,17 @@ function Signup() {
                         <div className='auth-account-text' style={{width: '81.25%'}}>
                             Chúng tôi sẽ gửi thư xác nhận đến địa chỉ email được liên kết với tài khoản của bạn. Hãy kiểm tra email đến từ chúng tôi.
                         </div>
-                        <form method='' action="/">
-                            <Input signup={true} title={'ĐỊA CHỈ EMAIL'} type={'email'}
+                        <form method='' action="/" onSubmit={handleSignUpFormSubmit}>
+                            <Input signup={true} title={'ĐỊA CHỈ EMAIL'} type={'email'} value={gmail} setValue={setGmail}
                                 placeholder={'Nhập email hợp lệ'} mgBottom='28px'>
                             </Input>
-                            <Input signup={true} title={'MẬT KHẨU'} type={'password'} mgBottom={'28px'} showPasswordFnc={handlePasswordClick}>
+                            <Input signup={true} title={'MẬT KHẨU'} type={'password'} 
+                                mgBottom={'28px'} showPasswordFnc={handlePasswordClick} value={password} setValue={setPassword}>
                             </Input>
-                            <Input signup={true} title={'SINH NHẬT'} type={'date'}
+                            <Input signup={true} title={'SINH NHẬT'} type={'date'} value={dateOfBirth} setValue={setDataOfBirth}
                                 mgBottom='28px' width='55%'>
                             </Input>
-                            <Input signup={true} title={'GIỚI TÍNH'} type={'radio'}
+                            <Input signup={true} title={'GIỚI TÍNH'} type={'radio'} setValue={setGender}
                                 mgBottom='28px'>
                             </Input>
                             <div className={cx('heading')}>
