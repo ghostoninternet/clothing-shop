@@ -1,10 +1,10 @@
-import brcypt from 'bcrypt' 
+import bcrypt from 'bcrypt' 
 import { generateToken, verifyToken } from "../utils/jwt.helper.js"
 import { environment } from "../config/environment.js"
 import { usersModel } from '../models/users.js'
 
-const signUp = async (req, res) => {
-  const userData = {
+const signup = async (req, res) => {
+  const userSentData = {
     gmail: req.body.gmail || "",
     password: req.body.password || "",
     gender: req.body.gender || "",
@@ -12,43 +12,40 @@ const signUp = async (req, res) => {
   }
   
   // Check if user doesn't enter email or password
-  if (userData.gmail == "" || userData.password == "" || userData.gender == "" || userData.dateOfBirth == "") {
-    res.status(403).json({message: "Please proivde all information"})
+  if (userSentData.gmail == "" || userSentData.password == "" || userSentData.gender == "" || userSentData.dateOfBirth == "") {
+    res.status(406).json({message: "Please proivde all information"})
   }
 
   let userFromDb
   try {
-    userFromDb = await usersModel.getUserByGmail(userData.gmail)
+    userFromDb = await usersModel.getUserByGmail(userSentData.gmail)
   } catch (error) {
     res.status(500).json({message: "Oops!! Something went wrong while looking for user from Database :("})
   }
 
   if (userFromDb != null || userFromDb != undefined) {
-    if (userFromDb?.gmail === userData.gmail) {
-      res.status(403).json({message: "User already existed!!"})
+    if (userFromDb?.gmail === userSentData.gmail) {
+      res.status(406).json({message: "User already existed!!"})
     }
   }
-  
-  // hash user's password
-  brcypt.hash(userData.password, 10, (err, hash) => {
-    if (err) res.status(500).json({message: "Oops!! Something went wrong while hashing the password :("})
-    userData.password = hash
-  })
+
+  const hashPassword = bcrypt.hashSync(userSentData.password, 10)
+  userSentData.password = hashPassword
 
   // Generate user access-token and refresh-token and save user data in DB
   try {
     const userDataToGenerateToken = {
-      gmail: userData.gmail,
-      gender: userData.gender,
-      dateOfBirth: userData.dateOfBirth
+      gmail: userSentData.gmail,
+      gender: userSentData.gender,
+      dateOfBirth: userSentData.dateOfBirth
     }
     const accessToken = await generateToken(userDataToGenerateToken, environment.JWT_ACESS_TOKEN_SECRET_KEY, "24h")
     const refreshToken = await generateToken(userDataToGenerateToken, environment.JWT_REFRESH_TOKEN_SECRET_KEY, "168h")
 
     // Save user data in DB
-    userData.refreshToken = refreshToken
-    console.log(userData)
-    const newUser = await usersModel.createNewUser(userData)
+    userSentData.refreshToken = refreshToken
+    console.log(userSentData)
+    const newUser = await usersModel.createNewUser(userSentData)
     console.log('🚀 ~ signUp ~ newUser:', newUser)
 
     // Return to FE access token and refresh token in cookie
@@ -60,19 +57,19 @@ const signUp = async (req, res) => {
 }
 
 const login = async (req, res) => {
-  const userData = {
+  const userSentData = {
     gmail: req.body.gmail || "",
     password: req.body.password || "",
   }
   
   // Check if user doesn't enter email or password
-  if (userData.gmail == "" || userData.password == "") {
+  if (userSentData.gmail == "" || userSentData.password == "") {
     res.status(403).json({message: "Please proivde email and password"})
   }
 
   let userFromDb
   try {
-    userFromDb = await usersModel.getUserByGmail(userData.gmail)
+    userFromDb = await usersModel.getUserByGmail(userSentData.gmail)
   } catch (error) {
     res.status(500).json({message: "Oops!! Something went wrong while looking for user from Database :("})
   }
@@ -81,13 +78,9 @@ const login = async (req, res) => {
     res.status(403).json({message: "User doesn't existed!. Please sign up to continue"})
   }
 
-  // hash user's password
-  brcypt.hash(userData.password, 10, (err, hash) => {
-    if (err) res.status(500).json({message: "Oops!! Something went wrong while hashing the password :("})
-    userData.password = hash
-  })
-
-  if (userFromDb.password != userData.password) {
+  const hashPassword = bcrypt.hashSync(userSentData.password, 10)
+  const isPasswordValid = bcrypt.compareSync(hashPassword, userFromDb.password)
+  if (isPasswordValid) {
     res.status(403).json({message: "Incorrect password!"})
   }
 
@@ -120,6 +113,9 @@ const refreshToken = async (req, res) => {
   } 
 
   const userRefreshToken = req?.cookies?.refreshToken || null
+  if (!userRefreshToken) {
+    res.status(403).json({message: "No refesh token found! Please login or signup!"})
+  }
   
   // Todo: Get user refresh-token from database
   let userFromDb
@@ -159,7 +155,7 @@ const logout = async (req, res) => {
 }
 
 export const AuthController = {
-  signUp,
+  signup,
   login,
   refreshToken,
   logout
