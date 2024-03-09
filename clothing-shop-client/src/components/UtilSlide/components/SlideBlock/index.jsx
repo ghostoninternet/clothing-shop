@@ -1,8 +1,8 @@
-import classNames from "classnames/bind";
+import classNames from "classnames/bind"
 import styles from './SlideBlock.module.scss'
 const cx = classNames.bind(styles)
 
-function SlideBlock({ children, imgSrc, title, description, link }) {
+function SlideBlock({ imgSrc, title, description, link }) {
     return ( 
         <a href={link} className={cx('slide-block')}>
             <div className={cx('img-block')}>

@@ -94,6 +94,12 @@ function Home() {
         }
     ]
     
+    const notificationList = [
+        "- Thời gian giao hàng trong Tháng 1 & 2/2024. Xem thêm tại đây!",
+        "- Thay đổi thuế GTGT",
+        "- Điều Chỉnh Giá Đặc Biệt (Online và Tất Cả Cửa Hàng)"
+    ]
+
     return (
         <Fragment>
             <div className={cx('slider')}>
@@ -107,9 +113,8 @@ function Home() {
                 <div className={cx('next-icon')} onClick={handleNext}></div>
             </div>
             <div className="container">
-                <Notification></Notification>
-                <UtilSlide title={'TIỆN ÍCH ỨNG DỤNG UNIQLO'} blocks={utilSlideBlocks}>
-                </UtilSlide>
+                <Notification notificationsList={notificationList} />
+                <UtilSlide title={'TIỆN ÍCH ỨNG DỤNG UNIQLO'} blocks={utilSlideBlocks}></UtilSlide>
                 <a href="https://www.uniqlo.com/vn/vi/special-feature/app" className={cx('more')}>XEM THÊM</a>
                 <div className={cx('info')}>
                     <div className={cx('info-title')}>THÔNG TIN</div>

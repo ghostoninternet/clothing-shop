@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind'
 import styles from './Cart.module.scss'
 import { Fragment, useEffect, useRef, useState } from 'react';
-import CartItem from '../../components/CartItem';
+import CartItem from './components/CartItem';
 import PathText from '../../components/PathText';
 import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles)

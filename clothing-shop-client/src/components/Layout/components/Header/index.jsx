@@ -266,7 +266,7 @@ function Header() {
         },
         {
             name: "TRẺ EM",
-            path: "/kid",
+            path: "/kids",
             type: [
                 [
                     {

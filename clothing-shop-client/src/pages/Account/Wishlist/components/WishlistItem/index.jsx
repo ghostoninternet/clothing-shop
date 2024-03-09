@@ -5,7 +5,7 @@ import { Fragment } from "react";
 
 const cx = classNames.bind(styles)
 
-function WishlistItem( {nb, item ,innerRef, fnc, refId} ) {
+function WishlistItem( {nb, item , innerRef, fnc, refId} ) {
     return (
         <Fragment>
             <div className={cx('wishlistItem-wrapper')}>

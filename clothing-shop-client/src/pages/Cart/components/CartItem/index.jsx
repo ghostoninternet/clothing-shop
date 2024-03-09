@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from './CartItem.module.scss'
-import { Fragment, useRef, useState } from "react";
+import { Fragment } from "react";
 const cx = classNames.bind(styles)
 
 function CartItem( {item, updownRef, popperRef, countRef, totalRef, refId, handleUpdown, handleChoseQuantity, handleRemove, handleCalProductCount, handleCalTotal} ) {

@@ -37,7 +37,6 @@ function CategoryDetailPage() {
         })
       })
     })
-    
     const pageTitle = listsOfTypes.filter((list) => list[1] === location.pathname)
     
     setBreadcumb([{text: "TRANG CHỦ UNIQLO", link: "/"}, {text: products[0].name, link: products[0].path}, {text: pageTitle[0][0]}])
@@ -89,7 +88,7 @@ function CategoryDetailPage() {
           {pageTitle}
         </div>
       </div>
-      
+
       <div className={`${styles["tab-container"]}`}>
         <div className={`${styles["tab-items-container"]}`}>
           <div className={`${styles["tab-item-wrapper"]}`}>

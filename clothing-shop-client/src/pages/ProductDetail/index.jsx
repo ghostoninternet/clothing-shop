@@ -1,14 +1,11 @@
-import { Fragment, useEffect, useRef, useState } from "react";
-import { useParams, useSearchParams } from "react-router-dom";
-
-import PathText from "../../components/PathText";
+import { Fragment, useEffect, useRef, useState } from "react" 
+import { useParams, useSearchParams } from "react-router-dom" 
 
 import classNames from 'classnames/bind'
+import PathText from "../../components/PathText"
 import styles from './ProductDetail.module.scss'
 
 const cx = classNames.bind(styles)
-
-
 
 function ProductDetail() {
     const product = {
@@ -110,18 +107,17 @@ function ProductDetail() {
         ],
     }
     
-    const { productIdPath } = useParams()
+    const { productId } = useParams()
     const [searchParams, setSearchParams] = useSearchParams()
 
     useEffect(() => {
-        searchParams.set("colorCode", product.colorCode[0]);
-        searchParams.set("sizeCode", product.sizeCode[0]);
-        setSearchParams(searchParams);
-    }, []);
+        searchParams.set("colorCode", product.colorCode[0]) 
+        searchParams.set("sizeCode", product.sizeCode[0]) 
+        setSearchParams(searchParams)
+    }, []) 
 
     const [imageList, setImageList] = useState([product.mainImage[0], ...product.image])
     const [buyCount, setBuyCount] = useState(1)
-
 
     const [displayImage, setDisplayImage] = useState(product.mainImage[0])
 
@@ -141,7 +137,7 @@ function ProductDetail() {
 
     useEffect(() => {
         if (imgItemRef.current[0])
-            imgItemRef.current[0].style.borderColor = 'black';
+            imgItemRef.current[0].style.borderColor = 'black' 
         if (colorRef.current[0])
             colorRef.current[0].style.boxShadow = '0 0 0 2px #fff, 0 0 0 4px #1f1a1a'
         if (sizeRef.current[0] && parseInt(product.quantity[0][0]) != 0) {
@@ -156,8 +152,8 @@ function ProductDetail() {
         setDisplayImage(imageList[index])
         prevBorderRef.current = currentBorderRef.current
         currentBorderRef.current = index
-        imgItemRef.current[prevBorderRef.current].style.borderColor = 'transparent';
-        imgItemRef.current[index].style.borderColor = 'black';
+        imgItemRef.current[prevBorderRef.current].style.borderColor = 'transparent' 
+        imgItemRef.current[index].style.borderColor = 'black' 
     }
 
     const handleNextSlide = () => {
@@ -224,8 +220,8 @@ function ProductDetail() {
         setImageList(newImageList)
         prevBorderRef.current = currentBorderRef.current
         currentBorderRef.current = 0 
-        imgItemRef.current[prevBorderRef.current].style.borderColor = 'transparent';
-        imgItemRef.current[0].style.borderColor = 'black';
+        imgItemRef.current[prevBorderRef.current].style.borderColor = 'transparent'
+        imgItemRef.current[0].style.borderColor = 'black'
         setDisplayImage(product.mainImage[index])
         setBuyCount(1)
     }
@@ -251,7 +247,7 @@ function ProductDetail() {
 
     return (
         <Fragment>
-            {!(/^E\d{6}-000/).test(productIdPath) ?
+            {!(/^E\d{6}-000/).test(productId) ?
                 <div>Sản Phẩm Này Không Tồn Tại</div> :
                 <div>
                     <PathText path={product.path}/>
@@ -470,4 +466,4 @@ function ProductDetail() {
     )
 }
 
-export default ProductDetail;
+export default ProductDetail 
