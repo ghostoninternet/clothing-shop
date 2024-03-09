@@ -1,19 +1,17 @@
-import { Fragment, useEffect, useRef, useState } from 'react';
-import PathText from '../../../components/PathText';
-
+import { Fragment, useEffect, useRef, useState } from 'react'
+import PathText from '../../../components/PathText'
 
 import classNames from 'classnames/bind'
 import styles from './Wishlist.module.scss'
-import WishlistItem from '../../../components/WishlistItem';
-import { Link } from 'react-router-dom';
-
+import WishlistItem from './components/WishlistItem'
+import { Link } from 'react-router-dom'
 
 const cx = classNames.bind(styles)
 
 function Wishlist() {
     useEffect(() => {
-        document.title = 'YÊU THÍCH | UNIQLO VN';
-    }, []);
+        document.title = 'YÊU THÍCH | UNIQLO VN'
+    }, [])
 
     const path = [
         {
@@ -89,7 +87,7 @@ function Wishlist() {
                                 <div className={cx('wishlist-heading')} style={{marginBottom: '8px'}}>
                                     KHÔNG CÓ SẢN PHẨM NÀO TRONG DANH SÁCH MONG MUỐN CỦA BẠN.
                                 </div>
-                                <div className={cx('wishlist-text')}>Nhấn vào dấu trái tim để thêm sản phẩm vào danh sách mong muốn của bạn.</div>
+                                <div className={cx('wishlist-text')} style={{marginBottom: '25px'}}>Nhấn vào dấu trái tim để thêm sản phẩm vào danh sách mong muốn của bạn.</div>
                             </Fragment>
                         ) : (
                             <div className="">
@@ -125,4 +123,4 @@ function Wishlist() {
     )
 }
 
-export default Wishlist;
+export default Wishlist

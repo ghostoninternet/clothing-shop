@@ -114,29 +114,29 @@ export const ManProduct = {
     {
       "id": 1,
       "title": "TẾT ẤM ÁP CÙNG UNIQLO",
-      "image": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
-      "url": "/news/1",
+      "imgSrc": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
+      "link": "/news/1",
       "description": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
     },
     {
       "id": 2,
       "title": "TẾT ẤM ÁP CÙNG UNIQLO",
-      "image": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
-      "url": "/news/1",
+      "imgSrc": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
+      "link": "/news/1",
       "description": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
     },
     {
       "id": 3,
       "title": "TẾT ẤM ÁP CÙNG UNIQLO",
-      "image": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
-      "url": "/news/1",
+      "imgSrc": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
+      "link": "/news/1",
       "description": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
     },
     {
       "id": 4,
       "title": "TẾT ẤM ÁP CÙNG UNIQLO",
-      "image": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
-      "url": "/news/1",
+      "imgSrc": "https://im.uniqlo.com/global-cms/spa/resa909321892f017bef9037be4ba250d38fr.jpg",
+      "link": "/news/1",
       "description": "Khám phá loạt ưu đãi hấp dẫn trong Livestream TẾT ẤM ÁP CÙNG UNIQLO lúc 12:30 PM ngày 02.02.2024."
     },
   ],
@@ -525,57 +525,57 @@ export const ManProduct = {
       {
         "id": 1,
         "title": "PEANUTS YOU CAN BE ANYTHING!",
-        "image": "https://im.uniqlo.com/global-cms/spa/res8b31ae68a1be140cf69b61611dc01f7efr.jpg",
-        "url": "/collection/1",
+        "imgSrc": "https://im.uniqlo.com/global-cms/spa/res8b31ae68a1be140cf69b61611dc01f7efr.jpg",
+        "link": "/collection/1",
         "description": "Những họa tiết mới khắc họa sống động các nhân vật Peanuts hiện đã có mặt tại UNIQLO UT."
       },
       {
         "id": 2,
         "title": "DISNEY VINTAGE POSTER COLLECTION",
-        "image": "https://im.uniqlo.com/global-cms/spa/res6129df9efdb57d7b3af31a5e9de02b89fr.jpg",
-        "url": "/collection/2",
+        "imgSrc": "https://im.uniqlo.com/global-cms/spa/res6129df9efdb57d7b3af31a5e9de02b89fr.jpg",
+        "link": "/collection/2",
         "description": "Bộ sưu tập lấy cảm hứng từ poster các bộ phim ngắn về chú chuột Mickey Mouse."
       },
       {
         "id": 3,
         "title": "PEANUTS YOU CAN BE ANYTHING!",
-        "image": "https://im.uniqlo.com/global-cms/spa/res8b31ae68a1be140cf69b61611dc01f7efr.jpg",
-        "url": "/collection/3",
+        "imgSrc": "https://im.uniqlo.com/global-cms/spa/res8b31ae68a1be140cf69b61611dc01f7efr.jpg",
+        "link": "/collection/3",
         "description": "Những họa tiết mới khắc họa sống động các nhân vật Peanuts hiện đã có mặt tại UNIQLO UT."
       },
       {
         "id": 4,
         "title": "DISNEY VINTAGE POSTER COLLECTION",
-        "image": "https://im.uniqlo.com/global-cms/spa/res6129df9efdb57d7b3af31a5e9de02b89fr.jpg",
-        "url": "/collection/4",
+        "imgSrc": "https://im.uniqlo.com/global-cms/spa/res6129df9efdb57d7b3af31a5e9de02b89fr.jpg",
+        "link": "/collection/4",
         "description": "Bộ sưu tập lấy cảm hứng từ poster các bộ phim ngắn về chú chuột Mickey Mouse."
       },
     ]
   },
   utilSlideBlocks: [
     {
-      image: "https://im.uniqlo.com/global-cms/spa/res2629834248797934e997734f81048e21fr.jpg",
+      imgSrc: "https://im.uniqlo.com/global-cms/spa/res2629834248797934e997734f81048e21fr.jpg",
       title: 'WELCOME COUPON',
       description: 'Tải ứng dụng và đăng ký tài khoản ngay để nhận MÃ GIẢM GIÁ 100.000VND áp dụng cho đơn hàng đầu tiên từ 1.000.000VND.',
-      url: 'https://apps.apple.com/vn/app/uniqlo-vn/id1564895546?mt=8'
+      link: 'https://apps.apple.com/vn/app/uniqlo-vn/id1564895546?mt=8'
     },
     {
-      image: "https://im.uniqlo.com/global-cms/spa/res35ed47075c05896951c0667a17a263c7fr.jpg",
+      imgSrc: "https://im.uniqlo.com/global-cms/spa/res35ed47075c05896951c0667a17a263c7fr.jpg",
       title: 'CLICK & COLLECT (Đặt Online & Nhận xuyên tết tại cửa hàng)',
       description: 'Nhận 01 Mã Giảm Giá 100.000VND* khi sử dụng dịch vụ Click & Collect. *Áp dụng cho đơn hàng online tiếp theo từ 1.000.000VND.',
-      url: 'https://www.uniqlo.com/vn/vi/spl/shopping-made-ec/click-&-collect'
+      link: 'https://www.uniqlo.com/vn/vi/spl/shopping-made-ec/click-&-collect'
     },
     {
-      image: "https://im.uniqlo.com/global-cms/spa/res747a14ba91cec5c31d78e90d99793712fr.jpg",
+      imgSrc: "https://im.uniqlo.com/global-cms/spa/res747a14ba91cec5c31d78e90d99793712fr.jpg",
       title: 'QUÉT MÃ VẠCH SẢN PHẨM',
       description: 'Quét mã vạch trên sản phẩm để dễ dàng kiểm tra xem sản phẩm còn hàng online hay trong cửa hàng.',
-      url: 'https://www.uniqlo.com/vn/vi/special-feature/app'
+      link: 'https://www.uniqlo.com/vn/vi/special-feature/app'
     },
     {
-      image: "https://im.uniqlo.com/global-cms/spa/resa7005eaee25b5c00ee4a325b855f267efr.jpg",
+      imgSrc: "https://im.uniqlo.com/global-cms/spa/resa7005eaee25b5c00ee4a325b855f267efr.jpg",
       title: 'EXTRA SIZE',
       description: 'Thêm các lựa chọn kích cỡ phù hợp nhất với bạn, từ XS đến XXL, chỉ có duy nhất tại cửa hàng online.',
-      url: 'https://www.uniqlo.com/vn/vi/special-feature/extra-size/women'
+      link: 'https://www.uniqlo.com/vn/vi/special-feature/extra-size/women'
     }
   ]
 }

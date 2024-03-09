@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
-import CategoryCard from "../../components/Cards/CategoryCard"
 import {
   ManProduct,
   WomanProduct,
   KidProduct,
   ChildProduct,
 } from "../../apis/product-data"
-import Information from "./components/Information"
 import Button from "./components/Button"
 import CategoryPageProduct from "./components/CategoryPageProduct"
 import styles from "./CategoryPage.module.scss"
 import BannerImageOnly from "./components/Banner/BannerImageOnly"
 import BannerWithContent from "./components/Banner/BannerWithContent"
+import CategoryCard from "../../components/Cards/CategoryCard"
+import Notification from "../../components/Notification"
+import UtilSlide from "../../components/UtilSlide"
 
 function CategoryPage() {
   const [pageTitle, setPageTitle] = useState("");
@@ -34,6 +35,12 @@ function CategoryPage() {
       setProduct(ChildProduct);
     }
   }, [location.pathname]);
+
+  const notificationList = [
+    "- MIỄN PHÍ giao hàng cho đơn hàng online từ 999.000 VND",
+    "- Thay đổi thuế GTGT",
+    "- Điều Chỉnh Giá Đặc Biệt (Online và Tất Cả Cửa Hàng)"
+  ]
 
   return (
     <>
@@ -81,36 +88,10 @@ function CategoryPage() {
             </div>
           </div>
 
-          <div className={`${styles["anouncement-container"]}`}>
-            <div className={`${styles["anouncement-title"]}`}>THÔNG BÁO</div>
-            <div className={`${styles["anouncement-items-wrapper"]}`}>
-              <a href="https://faq-vn.uniqlo.com/pkb_Home_UQ_VN?id=kA32t000000kCPm&q=th%E1%BB%9Di+gian+giao+h%C3%A0ng&l=vi&fs=Search&pn=1">
-                <div className={`${styles["anouncement-item-title"]}`}>
-                  - Thời gian giao hàng trong Tháng 1 & 2/2024. Xem thêm tại
-                  đây!
-                </div>
-              </a>
-              <a href="https://faq-vn.uniqlo.com/pkb_Home_UQ_VN?id=kA32t000000kCWJ&q=L%E1%BB%8Bch+ho%E1%BA%A1t+%C4%91%E1%BB%99ng%5D&l=vi&fs=Search&pn=1">
-                <div className={`${styles["anouncement-item-title"]}`}>
-                  - Lịch Hoạt Động Các Cửa Hàng UNIQLO Dịp Tết Nguyên Đán 2024
-                </div>
-              </a>
-              <a href="https://faq-vn.uniqlo.com/pkb_Home_UQ_VN?id=kA32t00000002FB&q=Gi%E1%BA%A3m+tr%E1%BB%AB+thu%E1%BA%BF+VAT&l=vi&fs=Search&pn=1">
-                <div className={`${styles["anouncement-item-title"]}`}>
-                  - Thay đổi thuế GTGT
-                </div>
-              </a>
-              <a href="https://faq-vn.uniqlo.com/articles/vi/FAQ/Notice-New-Price-For-Online-and-All-Stores">
-                <div className={`${styles["anouncement-item-title"]}`}>
-                  - Điều Chỉnh Giá Đặc Biệt (Online và Tất Cả Cửa Hàng)
-                </div>
-              </a>
-            </div>
-          </div>
+          <Notification notificationsList={notificationList} />
 
           <div className={`${styles["information-container"]}`}>
-            <div className={`${styles["title"]}`}>CHỦ ĐỀ NỔI BẬT</div>
-            <Information information={product.news} />
+            <UtilSlide title={"CHỦ ĐỀ NỔI BẬT"} titlePosition="mid" blocks={product.news} />
           </div>
           
           {
@@ -141,10 +122,7 @@ function CategoryPage() {
           }
           
           <div className={`${styles["top-news-container"]}`}>
-            <div className={`${styles["title"]}`}>TIN TỨC NỔI BẬT</div>
-            <div className={`${styles["information-container"]}`}>
-              <Information information={product.news} />
-            </div>
+            <UtilSlide title={"TIN TỨC NỔI BẬT"} titlePosition="mid" blocks={product.news} />
             <div>
               <Button
                 buttonText={"Xem Thêm"}
@@ -154,10 +132,7 @@ function CategoryPage() {
           </div>
 
           <div className={`${styles["ut-collection-container"]}`}>
-            <div className={`${styles["title"]}`}>Bộ Sưu Tập UT</div>
-            <div className={`${styles["information-container"]}`}>
-              <Information information={product.utCollection.utCollectionItems} />
-            </div>
+            <UtilSlide title={"Bộ Sưu Tập UT"} titlePosition="mid" blocks={product.utCollection.utCollectionItems} />
             <div>
               <Button
                 buttonText={"Xem Thêm"}
@@ -189,10 +164,7 @@ function CategoryPage() {
               </div>
             </div>
             <div className={`${styles["lifewear-section"]}`}>
-              <div className={`${styles["title"]}`}>Về LifeWear</div>
-              <div className={`${styles["information-container"]}`}>
-                <Information information={product.utCollection.utCollectionItems} />
-              </div>
+              <UtilSlide title={"Về LifeWear"} titlePosition="mid" blocks={product.utCollection.utCollectionItems} />
               <div>
                 <Button
                   buttonText={"Xem Thêm"}
@@ -201,10 +173,7 @@ function CategoryPage() {
               </div>
             </div>
             <div className={`${styles["live-station-section"]}`}>
-              <div className={`${styles["title"]}`}>Live Station</div>
-              <div className={`${styles["information-container"]}`}>
-                <Information information={product.utCollection.utCollectionItems} />
-              </div>
+              <UtilSlide title={"Live Station"} titlePosition="mid" blocks={product.utCollection.utCollectionItems} />
               <div>
                 <Button
                   buttonText={"Xem Thêm"}
@@ -215,10 +184,7 @@ function CategoryPage() {
           </div>
           
           <div className={`${styles["app-utils-container"]}`}>
-            <div className={`${styles["title"]}`}>Tiện Ích Từ Ứng Dụng</div>
-            <div className={`${styles["information-container"]}`}>
-              <Information information={product.utilSlideBlocks} />
-            </div>
+            <UtilSlide title={"Tiện Ích Từ Ứng Dụng"} titlePosition="mid" blocks={product.utilSlideBlocks} />
             <div>
               <Button
                 buttonText={"XEM THÊM VỀ ỨNG DỤNG UNIQLO"}
